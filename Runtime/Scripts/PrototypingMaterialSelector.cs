@@ -22,8 +22,8 @@ namespace Zigurous.Prototyping
         private PrototypingMaterialPreset preset;
 
         /// <summary>
-        /// The palette of available materials
-        /// from which new materials are created.
+        /// The palette of available materials from which new materials are
+        /// created.
         /// </summary>
         [Tooltip("The palette of available materials from which new materials are cloned.")]
         public PrototypingMaterialPalette palette;

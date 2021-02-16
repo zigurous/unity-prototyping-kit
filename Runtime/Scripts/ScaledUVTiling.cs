@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Zigurous.Prototyping
 {
     /// <summary>
-    /// Changes the tiling properties of a material's texture
-    /// based on the scale of the rendered object.
+    /// Changes the tiling properties of a material's texture based on the scale
+    /// of the rendered object.
     /// </summary>
     [ExecuteAlways]
     [RequireComponent(typeof(Renderer))]
@@ -24,8 +24,8 @@ namespace Zigurous.Prototyping
         private int _materialInstanceId;
 
         /// <summary>
-        /// The shader property name of the texture being tiled,
-        /// usually "_MainTex".
+        /// The shader property name of the texture being tiled, usually
+        /// "_MainTex".
         /// </summary>
         [Tooltip("The shader property name of the texture being tiled.")]
         public string texturePropertyName = "_MainTex";
@@ -38,16 +38,16 @@ namespace Zigurous.Prototyping
         public Vector2 textureScale = Vector2.one;
 
         /// <summary>
-        /// Whether the material texture will automatically be retiled when
-        /// the transform changes.
+        /// Whether the material texture will automatically be retiled when the
+        /// transform changes.
         /// </summary>
         [Tooltip("Whether the material texture will automatically be retiled when the transform of the renderer changes.")]
         public bool autoUpdate = true;
 
         #if UNITY_EDITOR
         /// <summary>
-        /// Whether the material texture will be tiled
-        /// while running in the Unity editor.
+        /// Whether the material texture will be tiled while running in the
+        /// Unity editor.
         /// </summary>
         [Tooltip("Whether the material texture will be tiled while running in the Unity editor.")]
         public bool updateInEditor = false;
