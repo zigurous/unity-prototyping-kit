@@ -1,5 +1,7 @@
 # Prototyping Kit
 
+The Prototyping Kit package contains assets and materials for prototyping levels in Unity.
+
 ## Installation
 
 The Unity Package Manager can load a package from a Git repository on a remote server.
