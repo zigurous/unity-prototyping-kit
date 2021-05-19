@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace Zigurous.Prototyping
@@ -14,14 +16,13 @@ namespace Zigurous.Prototyping
         /// <summary>
         /// The instance that renders the material of the tiled texture.
         /// </summary>
-        [Tooltip("The instance that renders the material of the tiled texture.")]
-        private Renderer _renderer;
+        public new Renderer renderer { get; private set; }
 
         /// <summary>
         /// The instance id of the cloned material to keep track of when the
         /// shared material has changed.
         /// </summary>
-        private int _materialInstanceId;
+        public int materialInstanceId { get; private set; }
 
         /// <summary>
         /// The shader property name of the texture being tiled, usually
@@ -53,11 +54,6 @@ namespace Zigurous.Prototyping
         public bool updateInEditor = false;
         #endif
 
-        private void OnDestroy()
-        {
-            _renderer = null;
-        }
-
         private void OnValidate()
         {
             if (this.enabled) {
@@ -76,60 +72,61 @@ namespace Zigurous.Prototyping
 
         public void Tile()
         {
-            #if UNITY_EDITOR
-            if (!CanUpdateInEditor()) {
-                return;
-            }
-            #endif
-
-            if (_renderer == null) {
-                _renderer = GetComponent<Renderer>();
+            if (this.renderer == null) {
+                this.renderer = GetComponent<Renderer>();
             }
 
-            Material material = Application.isPlaying ? _renderer.material : _renderer.sharedMaterial;
+            Material material = Application.isPlaying ?
+                this.renderer.material :
+                this.renderer.sharedMaterial;
 
-            if (material == null) {
-                return;
+            if (material != null)
+            {
+                #if UNITY_EDITOR
+                    UpdateMaterialInEditor(material);
+                #else
+                    UpdateMaterial(material);
+                #endif
             }
-
-            #if UNITY_EDITOR
-                if (Application.isPlaying) {
-                    material.SetTextureScale(this.texturePropertyName, CalculateTextureScale());
-                }
-                else if (this.updateInEditor)
-                {
-                    if (material.GetInstanceID() != _materialInstanceId)
-                    {
-                        material = new Material(material);
-                        _materialInstanceId = material.GetInstanceID();
-                        _renderer.sharedMaterial = material;
-                    }
-
-                    material.SetTextureScale(this.texturePropertyName, CalculateTextureScale());
-                }
-            #else
-                material.SetTextureScale(this.texturePropertyName, CalculateTextureScale());
-            #endif
         }
 
-        public Vector2 CalculateTextureScale() => new Vector2(
-                this.transform.localScale.x * this.textureScale.x,
-                this.transform.localScale.z * this.textureScale.y);
+        private void UpdateMaterial(Material material)
+        {
+            Vector2 scale = CalculateTextureScale();
+            material.SetTextureScale(this.texturePropertyName, scale);
+        }
 
         #if UNITY_EDITOR
-        private bool CanUpdateInEditor()
+        private void UpdateMaterialInEditor(Material material)
         {
-            if (!Application.isPlaying && !this.updateInEditor) {
-                return false;
-            }
-
             if (PrefabUtility.IsPartOfPrefabAsset(this)) {
-                return false;
+                return;
             }
 
-            return true;
+            if (Application.isPlaying)
+            {
+                UpdateMaterial(material);
+            }
+            else if (this.updateInEditor)
+            {
+                if (material.GetInstanceID() != this.materialInstanceId)
+                {
+                    material = new Material(material);
+                    this.materialInstanceId = material.GetInstanceID();
+                    this.renderer.sharedMaterial = material;
+                }
+
+                UpdateMaterial(material);
+            }
         }
         #endif
+
+        public Vector2 CalculateTextureScale()
+        {
+            return new Vector2(
+                this.transform.localScale.x * this.textureScale.x,
+                this.transform.localScale.z * this.textureScale.y);
+        }
 
     }
 

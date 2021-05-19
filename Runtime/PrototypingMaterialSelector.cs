@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace Zigurous.Prototyping
@@ -12,7 +14,7 @@ namespace Zigurous.Prototyping
         /// <summary>
         /// The renderer that holds the material being set.
         /// </summary>
-        private Renderer _renderer;
+        public new Renderer renderer { get; private set; }
 
         /// <summary>
         /// The selected material preset.
@@ -27,13 +29,6 @@ namespace Zigurous.Prototyping
         /// </summary>
         [Tooltip("The palette of available materials from which new materials are cloned.")]
         public PrototypingMaterialPalette palette;
-
-        private void OnDestroy()
-        {
-            this.palette = null;
-
-            _renderer = null;
-        }
 
         private void OnEnable()
         {
@@ -56,28 +51,56 @@ namespace Zigurous.Prototyping
 
         public void UpdateMaterial()
         {
-            if (_renderer == null) {
-                _renderer = GetComponent<Renderer>();
+            if (this.palette == null) {
+                return;
             }
 
-            Material presetMaterial = this.palette?.CreateMaterialInstance(this.preset);
+            if (this.renderer == null) {
+                this.renderer = GetComponent<Renderer>();
+            }
 
-            if (presetMaterial != null && !PrefabUtility.IsPartOfPrefabAsset(this))
+            Material presetMaterial = this.palette.CreateMaterialInstance(this.preset);
+
+            if (presetMaterial != null && CanUpdate())
             {
-                Material[] materials = Application.isPlaying ? _renderer.materials : _renderer.sharedMaterials;
+                Material[] materials = Application.isPlaying ?
+                    this.renderer.materials :
+                    this.renderer.sharedMaterials;
 
                 for (int i = 0; i < materials.Length; i++) {
                     materials[i] = presetMaterial;
                 }
 
                 if (Application.isPlaying) {
-                    _renderer.materials = materials;
+                    this.renderer.materials = materials;
                 } else {
-                    _renderer.sharedMaterials = materials;
+                    this.renderer.sharedMaterials = materials;
                 }
 
-                GetComponent<ScaledUVTiling>()?.Tile();
-                GetComponent<ScaledUVWTiling>()?.Tile();
+                Retile();
+            }
+        }
+
+        private bool CanUpdate()
+        {
+            #if UNITY_EDITOR
+                return !PrefabUtility.IsPartOfPrefabAsset(this);
+            #else
+                return true;
+            #endif
+        }
+
+        private void Retile()
+        {
+            ScaledUVTiling uvTiling = GetComponent<ScaledUVTiling>();
+            ScaledUVWTiling uvwTiling = GetComponent<ScaledUVWTiling>();
+
+            if (uvTiling != null) {
+                uvTiling.Tile();
+            }
+
+            if (uvwTiling != null) {
+                uvwTiling.Tile();
             }
         }
 

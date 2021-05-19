@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace Zigurous.Prototyping
@@ -14,14 +16,13 @@ namespace Zigurous.Prototyping
         /// <summary>
         /// The instance that renders the material of the tiled texture.
         /// </summary>
-        [Tooltip("The instance that renders the material of the tiled texture.")]
-        private Renderer _renderer;
+        public new Renderer renderer { get; private set; }
 
         /// <summary>
         /// The instance id of the cloned material to keep track of when the
         /// shared material has changed.
         /// </summary>
-        private int _materialInstanceId;
+        public int materialInstanceId { get; private set; }
 
         /// <summary>
         /// The shader property name of the texture being tiled, usually
@@ -53,11 +54,6 @@ namespace Zigurous.Prototyping
         public bool updateInEditor = false;
         #endif
 
-        private void OnDestroy()
-        {
-            _renderer = null;
-        }
-
         private void OnValidate()
         {
             if (this.enabled) {
@@ -76,86 +72,105 @@ namespace Zigurous.Prototyping
 
         public void Tile()
         {
-            #if UNITY_EDITOR
-            if (!CanUpdateInEditor()) {
-                return;
+            if (this.renderer == null) {
+                this.renderer = GetComponent<Renderer>();
             }
-            #endif
 
-            Material[] materials = FixedMaterialsArray();
-            Vector3 scale = CalculateTextureScale();
+            Material[] materials = Application.isPlaying ?
+                this.renderer.materials :
+                this.renderer.sharedMaterials;
 
-            #if UNITY_EDITOR
-                if (Application.isPlaying || this.updateInEditor)
-                {
-                    materials[0].SetTextureScale(this.texturePropertyName, new Vector2(scale.z, scale.y));
-                    materials[1].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.y));
-                    materials[2].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.z));
-                }
-            #else
-                materials[0].SetTextureScale(this.texturePropertyName, new Vector2(scale.z, scale.y));
-                materials[1].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.y));
-                materials[2].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.z));
-            #endif
+            if (materials != null)
+            {
+                #if UNITY_EDITOR
+                    UpdateMaterialsInEditor(materials);
+                #else
+                    if (ValidateMaterialsLength(materials)) {
+                        UpdateMaterials(materials);
+                    }
+                #endif
+            }
         }
 
-        private Material[] FixedMaterialsArray()
+        private void UpdateMaterials(Material[] materials)
         {
-            if (_renderer == null) {
-                _renderer = GetComponent<Renderer>();
+            Vector3 scale = CalculateTextureScale();
+
+            materials[0].SetTextureScale(this.texturePropertyName, new Vector2(scale.z, scale.y));
+            materials[1].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.y));
+            materials[2].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.z));
+        }
+
+        #if UNITY_EDITOR
+        private void UpdateMaterialsInEditor(Material[] materials)
+        {
+            if (PrefabUtility.IsPartOfPrefabAsset(this)) {
+                return;
             }
 
-            Material[] materials = Application.isPlaying ? _renderer.materials : _renderer.sharedMaterials;
+            if (Application.isPlaying)
+            {
+                UpdateMaterials(materials);
+            }
+            else if (this.updateInEditor)
+            {
+                Material mainMaterial = materials[0];
+
+                if (mainMaterial == null) {
+                    return;
+                }
+
+                if (mainMaterial.GetInstanceID() != this.materialInstanceId)
+                {
+                    materials = new Material[3] {
+                        new Material(mainMaterial),
+                        new Material(mainMaterial),
+                        new Material(mainMaterial)
+                    };
+
+                    this.renderer.sharedMaterials = materials;
+                    this.materialInstanceId = materials[0].GetInstanceID();
+                }
+
+                UpdateMaterials(materials);
+            }
+        }
+        #endif
+
+        private bool ValidateMaterialsLength(Material[] materials)
+        {
+            if (materials.Length == 3) {
+                return true;
+            }
+
             Material mainMaterial = materials[0];
 
             if (mainMaterial == null) {
-                return null;
-            }
-
-            if (Application.isPlaying && materials.Length != 3)
-            {
-                materials = new Material[3] {
-                    new Material(mainMaterial),
-                    new Material(mainMaterial),
-                    new Material(mainMaterial)
-                };
-
-                _renderer.materials = materials;
-            }
-            else if (!Application.isPlaying && this.updateInEditor && mainMaterial.GetInstanceID() != _materialInstanceId)
-            {
-                materials = new Material[3] {
-                    new Material(mainMaterial),
-                    new Material(mainMaterial),
-                    new Material(mainMaterial)
-                };
-
-                _renderer.sharedMaterials = materials;
-                _materialInstanceId = materials[0].GetInstanceID();
-            }
-
-            return materials;
-        }
-
-        public Vector3 CalculateTextureScale() => new Vector3(
-                this.transform.localScale.x * this.textureScale.x,
-                this.transform.localScale.y * this.textureScale.y,
-                this.transform.localScale.z * this.textureScale.z);
-
-        #if UNITY_EDITOR
-        private bool CanUpdateInEditor()
-        {
-            if (!Application.isPlaying && !this.updateInEditor) {
                 return false;
             }
 
-            if (PrefabUtility.IsPartOfPrefabAsset(this)) {
-                return false;
+            materials = new Material[3] {
+                new Material(mainMaterial),
+                new Material(mainMaterial),
+                new Material(mainMaterial)
+            };
+
+            if (Application.isPlaying) {
+                this.renderer.materials = materials;
+            } else {
+                this.renderer.sharedMaterials = materials;
             }
 
             return true;
         }
-        #endif
+
+        public Vector3 CalculateTextureScale()
+        {
+            return new Vector3(
+                this.transform.localScale.x * this.textureScale.x,
+                this.transform.localScale.y * this.textureScale.y,
+                this.transform.localScale.z * this.textureScale.z);
+        }
 
     }
 
