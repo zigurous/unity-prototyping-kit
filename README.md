@@ -2,6 +2,12 @@
 
 The Prototyping Kit package contains assets and materials for prototyping levels in Unity.
 
+Import the package namespace in each class/script you want to use it. You may need to regenerate project files/assemblies first.
+
+```csharp
+using Zigurous.Prototyping;
+```
+
 ## Installation
 
 The Unity Package Manager can load a package from a Git repository on a remote server.
