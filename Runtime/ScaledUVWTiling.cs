@@ -76,33 +76,40 @@ namespace Zigurous.Prototyping
                 this.renderer = GetComponent<Renderer>();
             }
 
+            #if UNITY_EDITOR
+                UpdateMaterialsInEditor();
+            #else
+                if (ValidateMaterialsLength()) {
+                    UpdateMaterials();
+                }
+            #endif
+        }
+
+        private void UpdateMaterials()
+        {
             Material[] materials = Application.isPlaying ?
                 this.renderer.materials :
                 this.renderer.sharedMaterials;
 
-            if (materials != null)
-            {
-                #if UNITY_EDITOR
-                    UpdateMaterialsInEditor(materials);
-                #else
-                    if (ValidateMaterialsLength(materials)) {
-                        UpdateMaterials(materials);
-                    }
-                #endif
+            if (ValidateMaterialsLength(materials)) {
+                UpdateMaterials(materials);
             }
         }
 
         private void UpdateMaterials(Material[] materials)
         {
-            Vector3 scale = CalculateTextureScale();
+            if (materials != null)
+            {
+                Vector3 scale = CalculateTextureScale();
 
-            materials[0].SetTextureScale(this.texturePropertyName, new Vector2(scale.z, scale.y));
-            materials[1].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.y));
-            materials[2].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.z));
+                materials[0].SetTextureScale(this.texturePropertyName, new Vector2(scale.z, scale.y));
+                materials[1].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.y));
+                materials[2].SetTextureScale(this.texturePropertyName, new Vector2(scale.x, scale.z));
+            }
         }
 
         #if UNITY_EDITOR
-        private void UpdateMaterialsInEditor(Material[] materials)
+        private void UpdateMaterialsInEditor()
         {
             if (PrefabUtility.IsPartOfPrefabAsset(this)) {
                 return;
@@ -110,35 +117,40 @@ namespace Zigurous.Prototyping
 
             if (Application.isPlaying)
             {
-                UpdateMaterials(materials);
+                UpdateMaterials(this.renderer.materials);
             }
             else if (this.updateInEditor)
             {
-                Material mainMaterial = materials[0];
+                Material[] materials = this.renderer.sharedMaterials;
 
-                if (mainMaterial == null) {
-                    return;
-                }
-
-                if (mainMaterial.GetInstanceID() != this.materialInstanceId)
+                if (materials != null && materials.Length > 0)
                 {
-                    materials = new Material[3] {
-                        new Material(mainMaterial),
-                        new Material(mainMaterial),
-                        new Material(mainMaterial)
-                    };
+                    Material mainMaterial = materials[0];
 
-                    this.renderer.sharedMaterials = materials;
-                    this.materialInstanceId = materials[0].GetInstanceID();
+                    if (mainMaterial.GetInstanceID() != this.materialInstanceId)
+                    {
+                        materials = new Material[3] {
+                            new Material(mainMaterial),
+                            new Material(mainMaterial),
+                            new Material(mainMaterial)
+                        };
+
+                        this.renderer.sharedMaterials = materials;
+                        this.materialInstanceId = materials[0].GetInstanceID();
+                    }
+
+                    UpdateMaterials(materials);
                 }
-
-                UpdateMaterials(materials);
             }
         }
         #endif
 
         private bool ValidateMaterialsLength(Material[] materials)
         {
+            if (materials == null) {
+                return false;
+            }
+
             if (materials.Length == 3) {
                 return true;
             }

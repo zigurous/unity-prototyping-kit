@@ -76,28 +76,33 @@ namespace Zigurous.Prototyping
                 this.renderer = GetComponent<Renderer>();
             }
 
+            #if UNITY_EDITOR
+                UpdateMaterialInEditor();
+            #else
+                UpdateMaterial();
+            #endif
+        }
+
+        private void UpdateMaterial()
+        {
             Material material = Application.isPlaying ?
                 this.renderer.material :
                 this.renderer.sharedMaterial;
 
-            if (material != null)
-            {
-                #if UNITY_EDITOR
-                    UpdateMaterialInEditor(material);
-                #else
-                    UpdateMaterial(material);
-                #endif
-            }
+            UpdateMaterial(material);
         }
 
         private void UpdateMaterial(Material material)
         {
-            Vector2 scale = CalculateTextureScale();
-            material.SetTextureScale(this.texturePropertyName, scale);
+            if (material != null)
+            {
+                Vector2 scale = CalculateTextureScale();
+                material.SetTextureScale(this.texturePropertyName, scale);
+            }
         }
 
         #if UNITY_EDITOR
-        private void UpdateMaterialInEditor(Material material)
+        private void UpdateMaterialInEditor()
         {
             if (PrefabUtility.IsPartOfPrefabAsset(this)) {
                 return;
@@ -105,11 +110,13 @@ namespace Zigurous.Prototyping
 
             if (Application.isPlaying)
             {
-                UpdateMaterial(material);
+                UpdateMaterial(this.renderer.material);
             }
             else if (this.updateInEditor)
             {
-                if (material.GetInstanceID() != this.materialInstanceId)
+                Material material = this.renderer.sharedMaterial;
+
+                if (material != null && material.GetInstanceID() != this.materialInstanceId)
                 {
                     material = new Material(material);
                     this.materialInstanceId = material.GetInstanceID();
