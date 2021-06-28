@@ -11,6 +11,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [ExecuteAlways]
     [RequireComponent(typeof(Renderer))]
+    [AddComponentMenu("Zigurous/Prototyping/Scaled UV Tiling")]
     public sealed class ScaledUVTiling : MonoBehaviour
     {
         /// <summary>

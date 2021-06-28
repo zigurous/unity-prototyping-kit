@@ -9,6 +9,7 @@ namespace Zigurous.Prototyping
     /// Assigns a renderer's material from a preset list of options.
     /// </summary>
     [RequireComponent(typeof(Renderer))]
+    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Selector")]
     public sealed class PrototypingMaterialSelector : MonoBehaviour
     {
         /// <summary>
