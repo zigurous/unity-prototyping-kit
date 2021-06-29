@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,10 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1}
+  textureScale: {x: 1, y: 1, z: 1}
   autoUpdate: 1
   updateInEditor: 1
+  axis: 0
 --- !u!114 &5025684179266096234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: 2
+  _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
 --- !u!1 &5025684179353969942
 GameObject:
@@ -187,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -234,10 +236,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1}
+  textureScale: {x: 1, y: 1, z: 1}
   autoUpdate: 1
   updateInEditor: 1
+  axis: 0
 --- !u!114 &5025684179353969945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: 2
+  _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
 --- !u!1 &5025684179370061013
 GameObject:
@@ -313,7 +317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -360,10 +364,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1}
+  textureScale: {x: 1, y: 1, z: 1}
   autoUpdate: 1
   updateInEditor: 1
+  axis: 0
 --- !u!114 &5025684179370061016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: 2
+  _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
 --- !u!1 &5025684179698766644
 GameObject:
@@ -439,7 +445,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -486,10 +492,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1}
+  textureScale: {x: 1, y: 1, z: 1}
   autoUpdate: 1
   updateInEditor: 1
+  axis: 0
 --- !u!114 &5025684179698766655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: 2
+  _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
 --- !u!1 &5025684180009710735
 GameObject:
@@ -565,7 +573,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -612,10 +620,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1}
+  textureScale: {x: 1, y: 1, z: 1}
   autoUpdate: 1
   updateInEditor: 1
+  axis: 0
 --- !u!114 &5025684180009710770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: 2
+  _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
 --- !u!1 &5025684180060847425
 GameObject:
@@ -691,7 +701,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -738,10 +748,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1}
+  textureScale: {x: 1, y: 1, z: 1}
   autoUpdate: 1
   updateInEditor: 1
+  axis: 0
 --- !u!114 &5025684180060847428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: 2
+  _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
 --- !u!1 &5485174824077111992
 GameObject:
