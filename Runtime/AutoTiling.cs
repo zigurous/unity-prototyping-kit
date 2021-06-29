@@ -42,7 +42,13 @@ namespace Zigurous.Prototyping
         /// otherwise most objects have a scale of one.
         /// </summary>
         [Tooltip("The base texture scale, e.g., planes usually have a scale of 10, otherwise most objects have a scale of one.")]
-        public Vector3 textureScale = Vector3.one;
+        public Vector3 baseScale = Vector3.one;
+
+        /// <summary>
+        /// The offset values applied to each material instance.
+        /// </summary>
+        [Tooltip("The offset values applied to each material instance.")]
+        public Vector2[] offsets = new Vector2[0];
 
         /// <summary>
         /// Whether the material texture will automatically be retiled when the
@@ -90,20 +96,43 @@ namespace Zigurous.Prototyping
 
             if (this.sharedMaterial != null)
             {
-                if (this.materials == null || this.sharedMaterialId != this.sharedMaterial.GetInstanceID())
+                if (this.materials == null || this.materials.Length == 0 || this.sharedMaterialId != this.sharedMaterial.GetInstanceID())
                 {
                     UpdateMaterials();
                 }
             }
 
-            if (this.materials != null) {
+            if (this.materials != null && this.materials.Length > 0)
+            {
                 SetTextureScale();
+                SetTextureOffset();
             }
         }
 
         public Vector3 GetTextureScale()
         {
-            return Vector3.Scale(this.transform.localScale, this.textureScale);
+            return Vector3.Scale(this.transform.localScale, this.baseScale);
+        }
+
+        private void SetTextureOffset()
+        {
+            if (this.offsets == null) {
+                return;
+            }
+
+            for (int i = 0; i < this.offsets.Length; i++)
+            {
+                Vector2 offset = this.offsets[i];
+
+                if (this.materials.Length > i)
+                {
+                    Material material = this.materials[i];
+
+                    if (material != null) {
+                        material.SetTextureOffset(this.texturePropertyName, offset);
+                    }
+                }
+            }
         }
 
         private void UpdateMaterials()
