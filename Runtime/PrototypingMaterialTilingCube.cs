@@ -6,6 +6,7 @@ namespace Zigurous.Prototyping
     /// Automatically tiles the material textures based on the object's scale.
     /// </summary>
     [ExecuteAlways]
+    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Tiling (Cube)")]
     public sealed class PrototypingMaterialTilingCube : PrototypingMaterialTiling
     {
         /// <summary>
