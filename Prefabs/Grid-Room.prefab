@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5025684179266096235}
   - component: {fileID: 5025684179266096228}
   - component: {fileID: 5025684179266096229}
-  - component: {fileID: 5025684179266096230}
   - component: {fileID: 5025684179266096234}
+  - component: {fileID: 5141335428833991358}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025684179266096231}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 50, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 5485174824077111995}
   m_RootOrder: 5
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,24 +96,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179266096230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179266096231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
-  texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1, z: 1}
-  autoUpdate: 1
-  updateInEditor: 1
-  axis: 0
 --- !u!114 &5025684179266096234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +110,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
+--- !u!114 &5141335428833991358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179266096231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  updateInEditor: 1
 --- !u!1 &5025684179353969942
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,8 +136,8 @@ GameObject:
   - component: {fileID: 5025684179353969946}
   - component: {fileID: 5025684179353969947}
   - component: {fileID: 5025684179353969940}
-  - component: {fileID: 5025684179353969941}
   - component: {fileID: 5025684179353969945}
+  - component: {fileID: 2610430046463933631}
   m_Layer: 0
   m_Name: Wall-Forward
   m_TagString: Untagged
@@ -157,8 +153,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025684179353969942}
   m_LocalRotation: {x: -0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 25, z: 25}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 0, y: 12.5, z: 12.5}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 5485174824077111995}
   m_RootOrder: 4
@@ -189,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224,24 +220,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179353969941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179353969942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
-  texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1, z: 1}
-  autoUpdate: 1
-  updateInEditor: 1
-  axis: 0
 --- !u!114 &5025684179353969945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +234,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
+--- !u!114 &2610430046463933631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179353969942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  updateInEditor: 1
 --- !u!1 &5025684179370061013
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,8 +260,8 @@ GameObject:
   - component: {fileID: 5025684179370061017}
   - component: {fileID: 5025684179370061018}
   - component: {fileID: 5025684179370061019}
-  - component: {fileID: 5025684179370061012}
   - component: {fileID: 5025684179370061016}
+  - component: {fileID: 6531502854609782675}
   m_Layer: 0
   m_Name: Wall-Right
   m_TagString: Untagged
@@ -285,8 +277,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025684179370061013}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 25, y: 25, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 12.5, y: 12.5, z: 0}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 5485174824077111995}
   m_RootOrder: 1
@@ -317,7 +309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -352,24 +344,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179370061012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179370061013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
-  texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1, z: 1}
-  autoUpdate: 1
-  updateInEditor: 1
-  axis: 0
 --- !u!114 &5025684179370061016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +358,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
+--- !u!114 &6531502854609782675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179370061013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  updateInEditor: 1
 --- !u!1 &5025684179698766644
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +384,8 @@ GameObject:
   - component: {fileID: 5025684179698766648}
   - component: {fileID: 5025684179698766649}
   - component: {fileID: 5025684179698766650}
-  - component: {fileID: 5025684179698766651}
   - component: {fileID: 5025684179698766655}
+  - component: {fileID: 2248564352297167178}
   m_Layer: 0
   m_Name: Wall-Left
   m_TagString: Untagged
@@ -413,8 +401,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025684179698766644}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -25, y: 25, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: -12.5, y: 12.5, z: 0}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 5485174824077111995}
   m_RootOrder: 2
@@ -445,7 +433,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -480,24 +468,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179698766651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179698766644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
-  texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1, z: 1}
-  autoUpdate: 1
-  updateInEditor: 1
-  axis: 0
 --- !u!114 &5025684179698766655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +482,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
+--- !u!114 &2248564352297167178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179698766644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  updateInEditor: 1
 --- !u!1 &5025684180009710735
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,8 +508,8 @@ GameObject:
   - component: {fileID: 5025684180009710771}
   - component: {fileID: 5025684180009710732}
   - component: {fileID: 5025684180009710733}
-  - component: {fileID: 5025684180009710734}
   - component: {fileID: 5025684180009710770}
+  - component: {fileID: 1109254643499620504}
   m_Layer: 0
   m_Name: Wall-Back
   m_TagString: Untagged
@@ -541,8 +525,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5025684180009710735}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 25, z: -25}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalPosition: {x: 0, y: 12.5, z: -12.5}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 5485174824077111995}
   m_RootOrder: 3
@@ -573,7 +557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -608,24 +592,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684180009710734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684180009710735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
-  texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1, z: 1}
-  autoUpdate: 1
-  updateInEditor: 1
-  axis: 0
 --- !u!114 &5025684180009710770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +606,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
+--- !u!114 &1109254643499620504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684180009710735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  updateInEditor: 1
 --- !u!1 &5025684180060847425
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,8 +632,8 @@ GameObject:
   - component: {fileID: 5025684180060847429}
   - component: {fileID: 5025684180060847430}
   - component: {fileID: 5025684180060847431}
-  - component: {fileID: 5025684180060847424}
   - component: {fileID: 5025684180060847428}
+  - component: {fileID: 5269085281791368855}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -670,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 5025684180060847425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
   m_Children: []
   m_Father: {fileID: 5485174824077111995}
   m_RootOrder: 0
@@ -701,7 +681,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -736,24 +716,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684180060847424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684180060847425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac8aa9232558294ab1a0ef2781243a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedMaterial: {fileID: 2100000, guid: 701a642bed373c841aa78e667e323de9, type: 2}
-  texturePropertyName: _MainTex
-  textureScale: {x: 1, y: 1, z: 1}
-  autoUpdate: 1
-  updateInEditor: 1
-  axis: 0
 --- !u!114 &5025684180060847428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,6 +730,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _preset: 2
   palette: {fileID: 11400000, guid: 1d54e4bfd11aa4d40bd817acd4b82fb9, type: 2}
+--- !u!114 &5269085281791368855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684180060847425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoUpdate: 1
+  updateInEditor: 1
 --- !u!1 &5485174824077111992
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5485174824077111995}
   m_Layer: 0
-  m_Name: Grid-Room-50x50x50
+  m_Name: Grid-Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

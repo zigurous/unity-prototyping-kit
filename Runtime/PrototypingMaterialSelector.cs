@@ -30,7 +30,7 @@ namespace Zigurous.Prototyping
             set
             {
                 _preset = value;
-                UpdateMaterial();
+                UpdateRenderer();
             }
         }
 
@@ -43,39 +43,19 @@ namespace Zigurous.Prototyping
 
         private void OnEnable()
         {
-            UpdateMaterial();
+            UpdateRenderer();
         }
 
         private void OnValidate()
         {
             if (this.enabled) {
-                UpdateMaterial();
+                UpdateRenderer();
             }
         }
 
-        public void UpdateMaterial()
+        private void UpdateRenderer()
         {
             if (this.palette == null) {
-                return;
-            }
-
-            AutoTiling tiling = GetComponent<AutoTiling>();
-
-            if (tiling != null)
-            {
-                tiling.sharedMaterial = this.palette.GetSharedMaterial(this.preset);
-                tiling.Tile();
-            }
-            else
-            {
-                Material presetMaterial = this.palette.CreateMaterialInstance(this.preset);
-                AssignMaterialInstances(presetMaterial);
-            }
-        }
-
-        private void AssignMaterialInstances(Material presetMaterial)
-        {
-            if (presetMaterial == null) {
                 return;
             }
 
@@ -89,19 +69,39 @@ namespace Zigurous.Prototyping
                 this.renderer = GetComponent<Renderer>();
             }
 
-            Material[] materials = Application.isPlaying ?
-                this.renderer.materials :
-                this.renderer.sharedMaterials;
+            if (Application.isPlaying) {
+                UpdateMaterials();
+            } else {
+                UpdateSharedMaterials();
+            }
+
+            PrototypingMaterialTiling tiling = GetComponent<PrototypingMaterialTiling>();
+
+            if (tiling != null) {
+                tiling.Tile();
+            }
+        }
+
+        private void UpdateMaterials()
+        {
+            Material[] materials = this.renderer.materials;
 
             for (int i = 0; i < materials.Length; i++) {
-                materials[i] = presetMaterial;
+                materials[i] = this.palette.CreateMaterialInstance(this.preset);
             }
 
-            if (Application.isPlaying) {
-                this.renderer.materials = materials;
-            } else {
-                this.renderer.sharedMaterials = materials;
+            this.renderer.materials = materials;
+        }
+
+        private void UpdateSharedMaterials()
+        {
+            Material[] materials = this.renderer.sharedMaterials;
+
+            for (int i = 0; i < materials.Length; i++) {
+                materials[i] = this.palette.GetSharedMaterial(this.preset);
             }
+
+            this.renderer.sharedMaterials = materials;
         }
 
     }
