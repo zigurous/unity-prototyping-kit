@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d58158faa0b43144aaf45ee4f8b64494, type: 3}
+  m_Name: PrototypingMaterialStyles
+  m_EditorClassIdentifier: 
+  baseMaterial: {fileID: 2100000, guid: 60755ffdb5736eb4ea955b3cb760a9ff, type: 2}
+  styles:
+  - preset: 1
+    color: {r: 0, g: 0, b: 0, a: 1}
+    metallic: 0
+    smoothness: 1
+  - preset: 2
+    color: {r: 0, g: 0, b: 0, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 5
+    color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 4
+    color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 6
+    color: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 3
+    color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 7
+    color: {r: 0.25, g: 0.102941185, b: 0, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 8
+    color: {r: 0.45, g: 0, b: 0, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 9
+    color: {r: 0.6, g: 0.24843751, b: 0, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 10
+    color: {r: 0.6, g: 0.45000002, b: 0, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 11
+    color: {r: 0.2928105, g: 0.5019608, b: 0, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 12
+    color: {r: 0, g: 0.4, b: 0.0347826, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 13
+    color: {r: 0, g: 0.5019608, b: 0.3346406, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 14
+    color: {r: 0, g: 0.5, b: 0.5, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 15
+    color: {r: 0, g: 0.33464047, b: 0.5019608, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 16
+    color: {r: 0, g: 0.18632811, b: 0.45, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 17
+    color: {r: 0.18790843, g: 0, b: 0.4509804, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 18
+    color: {r: 0.33333325, g: 0, b: 0.5, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 19
+    color: {r: 0.45, g: 0, b: 0.45, a: 1}
+    metallic: 0
+    smoothness: 0
+  - preset: 20
+    color: {r: 0.55, g: 0.16535947, b: 0.42058823, a: 1}
+    metallic: 0
+    smoothness: 0

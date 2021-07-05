@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor;
+using UnityEditor.Experimental.SceneManagement;
 #endif
 using UnityEngine;
 
@@ -13,33 +14,55 @@ namespace Zigurous.Prototyping
     public sealed class PrototypingMaterialSelector : MonoBehaviour
     {
         /// <summary>
-        /// The renderer that holds the material being set.
+        /// The renderer that holds the material being selected.
         /// </summary>
         public new Renderer renderer { get; private set; }
 
-        [Tooltip("The selected material preset.")]
+        [Tooltip("The selected style preset.")]
         [SerializeField]
-        private PrototypingMaterialPreset _preset;
+        private PrototypingMaterialStylePreset _style = PrototypingMaterialStylePreset.Black;
 
         /// <summary>
-        /// The selected material preset.
+        /// The selected style preset.
         /// </summary>
-        public PrototypingMaterialPreset preset
+        public PrototypingMaterialStylePreset style
         {
-            get => _preset;
+            get => _style;
             set
             {
-                _preset = value;
+                _style = value;
+                UpdateRenderer();
+            }
+        }
+
+        [Tooltip("The selected pattern preset.")]
+        [SerializeField]
+        private PrototypingMaterialPatternPreset _pattern = PrototypingMaterialPatternPreset.Pattern1;
+
+        /// <summary>
+        /// The selected pattern preset.
+        /// </summary>
+        public PrototypingMaterialPatternPreset pattern
+        {
+            get => _pattern;
+            set
+            {
+                _pattern = value;
                 UpdateRenderer();
             }
         }
 
         /// <summary>
-        /// The palette of available materials from which new materials are
-        /// created.
+        /// The palette of available styles.
         /// </summary>
-        [Tooltip("The palette of available materials from which new materials are cloned.")]
-        public PrototypingMaterialPalette palette;
+        [Tooltip("The palette of available styles.")]
+        public PrototypingMaterialStylePalette styles;
+
+        /// <summary>
+        /// The palette of available patterns.
+        /// </summary>
+        [Tooltip("The palette of available patterns.")]
+        public PrototypingMaterialPatternPalette patterns;
 
         private void OnEnable()
         {
@@ -55,12 +78,12 @@ namespace Zigurous.Prototyping
 
         private void UpdateRenderer()
         {
-            if (this.palette == null) {
+            if (this.styles == null) {
                 return;
             }
 
             #if UNITY_EDITOR
-            if (PrefabUtility.IsPartOfPrefabAsset(this)) {
+            if (PrefabUtility.IsPartOfPrefabAsset(this) || PrefabStageUtility.GetCurrentPrefabStage() != null) {
                 return;
             }
             #endif
@@ -86,22 +109,42 @@ namespace Zigurous.Prototyping
         {
             Material[] materials = this.renderer.materials;
 
-            for (int i = 0; i < materials.Length; i++) {
-                materials[i] = this.palette.CreateMaterialInstance(this.preset);
-            }
+            if (materials != null)
+            {
+                for (int i = 0; i < materials.Length; i++)
+                {
+                    Material material = this.styles.CreateMaterialInstance(this.style);
 
-            this.renderer.materials = materials;
+                    if (this.patterns != null) {
+                        this.patterns.SetTexture(material, this.pattern);
+                    }
+
+                    materials[i] = material;
+                }
+
+                this.renderer.materials = materials;
+            }
         }
 
         private void UpdateSharedMaterials()
         {
             Material[] materials = this.renderer.sharedMaterials;
 
-            for (int i = 0; i < materials.Length; i++) {
-                materials[i] = this.palette.GetSharedMaterial(this.preset);
-            }
+            if (materials != null)
+            {
+                for (int i = 0; i < materials.Length; i++)
+                {
+                    Material material = this.styles.CreateMaterialInstance(this.style);
 
-            this.renderer.sharedMaterials = materials;
+                    if (this.patterns != null) {
+                        this.patterns.SetTexture(material, this.pattern);
+                    }
+
+                    materials[i] = material;
+                }
+
+                this.renderer.sharedMaterials = materials;
+            }
         }
 
     }
