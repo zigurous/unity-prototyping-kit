@@ -39,7 +39,7 @@ MonoBehaviour:
     metallic: 0
     smoothness: 0
   - preset: 7
-    color: {r: 0.25, g: 0.102941185, b: 0, a: 1}
+    color: {r: 0.2509804, g: 0.10457517, b: 0, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 8
@@ -47,11 +47,11 @@ MonoBehaviour:
     metallic: 0
     smoothness: 0
   - preset: 9
-    color: {r: 0.6, g: 0.24843751, b: 0, a: 1}
+    color: {r: 0.54901963, g: 0.22875819, b: 0, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 10
-    color: {r: 0.6, g: 0.45000002, b: 0, a: 1}
+    color: {r: 0.54901963, g: 0.3660131, b: 0, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 11
@@ -59,7 +59,7 @@ MonoBehaviour:
     metallic: 0
     smoothness: 0
   - preset: 12
-    color: {r: 0, g: 0.4, b: 0.0347826, a: 1}
+    color: {r: 0, g: 0.45, b: 0.038671874, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 13
@@ -75,11 +75,11 @@ MonoBehaviour:
     metallic: 0
     smoothness: 0
   - preset: 16
-    color: {r: 0, g: 0.18632811, b: 0.45, a: 1}
+    color: {r: 0, g: 0.20869565, b: 0.5, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 17
-    color: {r: 0.18790843, g: 0, b: 0.4509804, a: 1}
+    color: {r: 0.16732012, g: 0, b: 0.5019608, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 18
@@ -91,6 +91,6 @@ MonoBehaviour:
     metallic: 0
     smoothness: 0
   - preset: 20
-    color: {r: 0.55, g: 0.16535947, b: 0.42058823, a: 1}
+    color: {r: 0.55, g: 0.1375, b: 0.41249993, a: 1}
     metallic: 0
     smoothness: 0
