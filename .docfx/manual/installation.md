@@ -1,8 +1,4 @@
-# Prototyping Kit
-
-The Prototyping Kit package contains assets and materials for prototyping levels in Unity.
-
-## Installation
+# Installation
 
 Use the Unity [Package Manager](https://docs.unity3d.com/Manual/upm-ui.html) to install the Prototyping Kit package.
 
@@ -29,3 +25,9 @@ Import the package namespace in each script or file you want to use it.
 ```csharp
 using Zigurous.Prototyping;
 ```
+
+### Source Code
+
+The source code for the Prototyping Kit package is in the following repository:
+
+- https://github.com/zigurous/unity-prototyping-kit
