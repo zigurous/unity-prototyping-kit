@@ -12,7 +12,7 @@ namespace Zigurous.Prototyping
         private static readonly int _Smoothness = Shader.PropertyToID("_Glossiness");
 
         /// <summary>
-        /// A material style, indicating color, metallic, and smoothness values.
+        /// A material style, defined by color, metallic, and smoothness values.
         /// </summary>
         [System.Serializable]
         public struct Style

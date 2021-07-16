@@ -11,7 +11,7 @@ namespace Zigurous.Prototyping
         private static readonly int _EmissionMap = Shader.PropertyToID("_EmissionMap");
 
         /// <summary>
-        /// A material pattern, indicating a texture asset.
+        /// A material pattern, defined by a texture asset.
         /// </summary>
         [System.Serializable]
         public struct Pattern

@@ -2,3 +2,11 @@
   href: index.md
 - name: Installation
   href: installation.md
+- name: Reference
+  items:
+  - name: Prefabs
+    href: prefabs.md
+  - name: Materials
+    href: materials.md
+  - name: Textures
+    href: textures.md
