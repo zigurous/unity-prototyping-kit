@@ -6,7 +6,7 @@ namespace Zigurous.Prototyping
     /// A collection of material style presets.
     /// </summary>
     [CreateAssetMenu(menuName = "Zigurous/Prototyping/Material Style Palette")]
-    public sealed class PrototypingMaterialStylePalette : ScriptableObject
+    public sealed class MaterialStylePalette : ScriptableObject
     {
         private static readonly int _Metallic = Shader.PropertyToID("_Metallic");
         private static readonly int _Smoothness = Shader.PropertyToID("_Glossiness");
@@ -21,7 +21,7 @@ namespace Zigurous.Prototyping
             /// The preset enumeration value of the style.
             /// </summary>
             [Tooltip("The preset enumeration value of the style.")]
-            public PrototypingMaterialStylePreset preset;
+            public MaterialStylePreset preset;
 
             /// <summary>
             /// The color of the material style.
@@ -60,7 +60,7 @@ namespace Zigurous.Prototyping
         /// Returns a new material instance for the <paramref name="preset"/>.
         /// </summary>
         /// <param name="preset">The preset for the material.</param>
-        public Material CreateMaterialInstance(PrototypingMaterialStylePreset preset)
+        public Material CreateMaterialInstance(MaterialStylePreset preset)
         {
             if (this.baseMaterial == null) {
                 return null;

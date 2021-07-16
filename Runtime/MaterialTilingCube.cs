@@ -7,7 +7,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [ExecuteAlways]
     [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Tiling (Cube)")]
-    public sealed class PrototypingMaterialTilingCube : PrototypingMaterialTiling
+    public sealed class MaterialTilingCube : MaterialTiling
     {
         /// <summary>
         /// The instance id of the shared material to detect when changes are

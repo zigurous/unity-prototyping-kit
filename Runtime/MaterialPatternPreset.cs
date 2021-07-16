@@ -3,7 +3,7 @@
     /// <summary>
     /// An enumerated preset of material patterns.
     /// </summary>
-    public enum PrototypingMaterialPatternPreset
+    public enum MaterialPatternPreset
     {
         Pattern1,
         Pattern2,

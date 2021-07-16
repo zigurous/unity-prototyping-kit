@@ -3,7 +3,7 @@
     /// <summary>
     /// An enumerated preset of material styles.
     /// </summary>
-    public enum PrototypingMaterialStylePreset
+    public enum MaterialStylePreset
     {
         None,
         Glass,

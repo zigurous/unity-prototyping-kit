@@ -11,7 +11,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [RequireComponent(typeof(Renderer))]
     [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Selector")]
-    public sealed class PrototypingMaterialSelector : MonoBehaviour
+    public sealed class MaterialSelector : MonoBehaviour
     {
         /// <summary>
         /// The renderer that holds the material being selected.
@@ -20,12 +20,12 @@ namespace Zigurous.Prototyping
 
         [Tooltip("The selected style preset.")]
         [SerializeField]
-        private PrototypingMaterialStylePreset _style = PrototypingMaterialStylePreset.Black;
+        private MaterialStylePreset _style = MaterialStylePreset.Black;
 
         /// <summary>
         /// The selected style preset.
         /// </summary>
-        public PrototypingMaterialStylePreset style
+        public MaterialStylePreset style
         {
             get => _style;
             set
@@ -37,12 +37,12 @@ namespace Zigurous.Prototyping
 
         [Tooltip("The selected pattern preset.")]
         [SerializeField]
-        private PrototypingMaterialPatternPreset _pattern = PrototypingMaterialPatternPreset.Pattern1;
+        private MaterialPatternPreset _pattern = MaterialPatternPreset.Pattern1;
 
         /// <summary>
         /// The selected pattern preset.
         /// </summary>
-        public PrototypingMaterialPatternPreset pattern
+        public MaterialPatternPreset pattern
         {
             get => _pattern;
             set
@@ -56,13 +56,13 @@ namespace Zigurous.Prototyping
         /// The palette of available styles.
         /// </summary>
         [Tooltip("The palette of available styles.")]
-        public PrototypingMaterialStylePalette styles;
+        public MaterialStylePalette styles;
 
         /// <summary>
         /// The palette of available patterns.
         /// </summary>
         [Tooltip("The palette of available patterns.")]
-        public PrototypingMaterialPatternPalette patterns;
+        public MaterialPatternPalette patterns;
 
         private void OnEnable()
         {
@@ -98,7 +98,7 @@ namespace Zigurous.Prototyping
                 UpdateSharedMaterials();
             }
 
-            PrototypingMaterialTiling tiling = GetComponent<PrototypingMaterialTiling>();
+            MaterialTiling tiling = GetComponent<MaterialTiling>();
 
             if (tiling != null) {
                 tiling.Tile();

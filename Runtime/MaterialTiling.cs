@@ -11,7 +11,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [ExecuteAlways]
     [RequireComponent(typeof(Renderer))]
-    public abstract class PrototypingMaterialTiling : MonoBehaviour
+    public abstract class MaterialTiling : MonoBehaviour
     {
         private static int _MainTex = Shader.PropertyToID("_MainTex");
 
