@@ -3,13 +3,16 @@
 namespace Zigurous.Prototyping
 {
     /// <summary>
-    /// An enumerated collection of preset patterns.
+    /// A collection of material pattern presets.
     /// </summary>
     [CreateAssetMenu(menuName = "Zigurous/Prototyping/Material Pattern Palette")]
     public sealed class PrototypingMaterialPatternPalette : ScriptableObject
     {
         private static readonly int _EmissionMap = Shader.PropertyToID("_EmissionMap");
 
+        /// <summary>
+        /// A material pattern, indicating a texture asset.
+        /// </summary>
         [System.Serializable]
         public struct Pattern
         {
@@ -33,8 +36,9 @@ namespace Zigurous.Prototyping
         public Pattern[] patterns = new Pattern[0];
 
         /// <summary>
-        /// Returns the texture asset for a given preset value.
+        /// Returns the texture asset for the <paramref name="preset"/>.
         /// </summary>
+        /// <param name="preset">The preset to get the texture for.</param>
         public Texture2D GetTexture(PrototypingMaterialPatternPreset preset)
         {
             if (this.patterns == null) {
@@ -53,6 +57,11 @@ namespace Zigurous.Prototyping
             return null;
         }
 
+        /// <summary>
+        /// Applies the preset pattern texture to the material.
+        /// </summary>
+        /// <param name="material">The material to apply the pattern to.</param>
+        /// <param name="preset">The preset to apply.</param>
         public void SetTexture(Material material, PrototypingMaterialPatternPreset preset)
         {
             if (this.patterns == null) {

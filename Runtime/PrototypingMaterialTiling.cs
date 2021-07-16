@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Zigurous.Prototyping
 {
     /// <summary>
-    /// Automatically tiles the material textures based on the object's scale.
+    /// Automatically tiles the materials of an object based on its scale.
     /// </summary>
     [ExecuteAlways]
     [RequireComponent(typeof(Renderer))]
@@ -51,6 +51,9 @@ namespace Zigurous.Prototyping
             }
         }
 
+        /// <summary>
+        /// Tiles the materials of the object.
+        /// </summary>
         public void Tile()
         {
             #if UNITY_EDITOR
@@ -75,14 +78,27 @@ namespace Zigurous.Prototyping
             #endif
         }
 
-        protected void UpdateMaterial(Material material, Vector2 scale)
+        /// <summary>
+        /// Sets the texture scale of the <paramref name="material"/> to the
+        /// provided <paramref name="scale"/>.
+        /// </summary>
+        /// <param name="material">The material to set the texture scale of.</param>
+        /// <param name="scale">The texture scale to set.</param>
+        protected void SetTextureScale(Material material, Vector2 scale)
         {
             if (material != null) {
                 material.SetTextureScale(_MainTex, scale);
             }
         }
 
+        /// <summary>
+        /// Updates the materials of the object.
+        /// </summary>
         protected abstract void UpdateMaterials();
+
+        /// <summary>
+        /// Updates the materials of the object while running in the editor.
+        /// </summary>
         protected abstract void UpdateMaterialsInEditor();
 
     }

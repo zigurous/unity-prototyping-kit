@@ -3,7 +3,7 @@
 namespace Zigurous.Prototyping
 {
     /// <summary>
-    /// Automatically tiles the material textures based on the object's scale.
+    /// Automatically tiles the materials of a plane based on its scale.
     /// </summary>
     [ExecuteAlways]
     [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Tiling (Plane)")]
@@ -16,12 +16,14 @@ namespace Zigurous.Prototyping
         /// </summary>
         private int _sharedInstanceId = -1;
 
+        /// <inheritdoc />
         protected override void UpdateMaterials()
         {
             Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10.0f);
-            UpdateMaterial(this.renderer.material, new Vector2(scale.x, scale.z));
+            SetTextureScale(this.renderer.material, new Vector2(scale.x, scale.z));
         }
 
+        /// <inheritdoc />
         protected override void UpdateMaterialsInEditor()
         {
             Material sharedMaterial = this.renderer.sharedMaterial;
@@ -35,7 +37,7 @@ namespace Zigurous.Prototyping
                 }
 
                 Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10.0f);
-                UpdateMaterial(this.renderer.sharedMaterial, new Vector2(scale.x, scale.z));
+                SetTextureScale(this.renderer.sharedMaterial, new Vector2(scale.x, scale.z));
             }
         }
 

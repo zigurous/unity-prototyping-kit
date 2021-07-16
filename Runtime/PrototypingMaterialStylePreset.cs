@@ -1,5 +1,8 @@
 ﻿namespace Zigurous.Prototyping
 {
+    /// <summary>
+    /// An enumerated preset of material styles.
+    /// </summary>
     public enum PrototypingMaterialStylePreset
     {
         None,
