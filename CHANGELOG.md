@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2021/07/21
+
+### Added
+
+- New prototyping cube mesh
+- New grid pattern texture variants (14)
+- Cubemap surface shader
+- Cubemap prefabs
+- 8x8 checkerboard
+
+### Changed
+
+- All scripts have been rewritten for simplicity, performance, and new feature support
+
 ## [0.1.0] - 2021/05/19
 
 ### Added
