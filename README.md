@@ -2,7 +2,7 @@
 
 [![](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/zigurous/unity-prototyping-kit) [![](https://img.shields.io/github/package-json/v/zigurous/unity-prototyping-kit)](https://github.com/zigurous/unity-prototyping-kit/releases) [![](https://img.shields.io/badge/docs-link-success)](https://docs.zigurous.com/com.zigurous.prototyping) [![](https://img.shields.io/github/license/zigurous/unity-prototyping-kit)](https://github.com/zigurous/unity-prototyping-kit/blob/main/LICENSE.md)
 
-The Prototyping Kit package contains assets and materials for prototyping levels in Unity. The best feature of the package is the ability for objects to be styled without needing to create new materials, and the ability for those materials to be automatically tiled based on the object's size. The package is still in development, and more functionality will be added over time.
+The Prototyping Kit package contains assets and materials for prototyping levels in Unity. The prefabs included in the package can be styled without needing to create new materials, and they are tiled automatically based on the size of the object. The package is still in development, and more functionality will be added over time.
 
 ## Reference
 
