@@ -64,6 +64,19 @@ namespace Zigurous.Prototyping
         [Tooltip("The palette of available patterns.")]
         public MaterialPatternPalette patterns;
 
+        /// <summary>
+        /// Applies the selected style and pattern to the renderer.
+        /// </summary>
+        /// <param name="style">The style to apply.</param>
+        /// <param name="pattern">The pattern to apply.</param>
+        public void Apply(MaterialStylePreset style, MaterialPatternPreset pattern)
+        {
+            _style = style;
+            _pattern = pattern;
+
+            UpdateRenderer();
+        }
+
         private void OnEnable()
         {
             UpdateRenderer();
