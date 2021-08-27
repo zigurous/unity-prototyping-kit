@@ -36,9 +36,10 @@ namespace Zigurous.Prototyping
         public Pattern[] patterns = new Pattern[0];
 
         /// <summary>
-        /// Returns the texture asset for the <paramref name="preset"/>.
+        /// Returns the texture asset for a given preset.
         /// </summary>
         /// <param name="preset">The preset to get the texture for.</param>
+        /// <returns>The texture asset for the preset.</returns>
         public Texture2D GetTexture(MaterialPatternPreset preset)
         {
             if (this.patterns == null) {

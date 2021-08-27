@@ -14,7 +14,7 @@ namespace Zigurous.Prototyping
     public sealed class MaterialSelector : MonoBehaviour
     {
         /// <summary>
-        /// The renderer that holds the material being selected.
+        /// The renderer that holds the material being selected (Read only).
         /// </summary>
         public new Renderer renderer { get; private set; }
 

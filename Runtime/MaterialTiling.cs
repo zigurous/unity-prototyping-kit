@@ -16,7 +16,7 @@ namespace Zigurous.Prototyping
         private static int _MainTex = Shader.PropertyToID("_MainTex");
 
         /// <summary>
-        /// The renderer component of the material being tiled.
+        /// The renderer component of the material being tiled (Read only).
         /// </summary>
         public new Renderer renderer { get; private set; }
 
@@ -79,8 +79,7 @@ namespace Zigurous.Prototyping
         }
 
         /// <summary>
-        /// Sets the texture scale of the <paramref name="material"/> to the
-        /// provided <paramref name="scale"/>.
+        /// Sets the texture scale of a material.
         /// </summary>
         /// <param name="material">The material to set the texture scale of.</param>
         /// <param name="scale">The texture scale to set.</param>

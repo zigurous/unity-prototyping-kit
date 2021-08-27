@@ -57,9 +57,10 @@ namespace Zigurous.Prototyping
         public Style[] styles = new Style[0];
 
         /// <summary>
-        /// Returns a new material instance for the <paramref name="preset"/>.
+        /// Returns a new material instance for a given preset.
         /// </summary>
         /// <param name="preset">The preset for the material.</param>
+        /// <returns>A new material instance for the given preset.</returns>
         public Material CreateMaterialInstance(MaterialStylePreset preset)
         {
             if (this.baseMaterial == null) {
