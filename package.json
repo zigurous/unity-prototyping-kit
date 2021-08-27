@@ -12,7 +12,7 @@
   ],
   "repository": "https://github.com/zigurous/unity-prototyping-kit",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.prototyping",
-  "changelogUrl": "https://docs.zigurous.com/com.zigurous.prototyping/changelog/CHANGELOG.html",
+  "changelogUrl": "https://docs.zigurous.com/com.zigurous.prototyping/changelog",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },
