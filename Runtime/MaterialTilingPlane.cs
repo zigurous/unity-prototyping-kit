@@ -19,7 +19,7 @@ namespace Zigurous.Prototyping
         /// <inheritdoc />
         protected override void UpdateMaterials()
         {
-            Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10.0f);
+            Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10f);
             SetTextureScale(this.renderer.material, new Vector2(scale.x, scale.z));
         }
 
@@ -36,7 +36,7 @@ namespace Zigurous.Prototyping
                     _sharedInstanceId = sharedMaterial.GetInstanceID();
                 }
 
-                Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10.0f);
+                Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10f);
                 SetTextureScale(this.renderer.sharedMaterial, new Vector2(scale.x, scale.z));
             }
         }

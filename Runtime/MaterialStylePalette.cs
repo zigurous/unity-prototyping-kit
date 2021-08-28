@@ -33,14 +33,14 @@ namespace Zigurous.Prototyping
             /// The metallic value of the material style.
             /// </summary>
             [Tooltip("The metallic value of the material style.")]
-            [Range(0.0f, 1.0f)]
+            [Range(0f, 1f)]
             public float metallic;
 
             /// <summary>
             /// The smoothness value of the material style.
             /// </summary>
             [Tooltip("The smoothness value of the material style.")]
-            [Range(0.0f, 1.0f)]
+            [Range(0f, 1f)]
             public float smoothness;
         }
 
