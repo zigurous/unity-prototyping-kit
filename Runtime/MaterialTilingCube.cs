@@ -16,7 +16,7 @@ namespace Zigurous.Prototyping
         /// </summary>
         private int _sharedInstanceId = -1;
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         protected override void UpdateMaterials()
         {
             if (this.renderer.materials != null)
@@ -29,7 +29,7 @@ namespace Zigurous.Prototyping
             }
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         protected override void UpdateMaterialsInEditor()
         {
             Material[] sharedMaterials = this.renderer.sharedMaterials;

@@ -16,14 +16,14 @@ namespace Zigurous.Prototyping
         /// </summary>
         private int _sharedInstanceId = -1;
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         protected override void UpdateMaterials()
         {
             Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10f);
             SetTextureScale(this.renderer.material, new Vector2(scale.x, scale.z));
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         protected override void UpdateMaterialsInEditor()
         {
             Material sharedMaterial = this.renderer.sharedMaterial;
