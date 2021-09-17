@@ -18,8 +18,8 @@ namespace Zigurous.Prototyping
         /// </summary>
         public new Renderer renderer { get; private set; }
 
-        [Tooltip("The selected style preset.")]
         [SerializeField]
+        [Tooltip("The selected style preset.")]
         private MaterialStylePreset _style = MaterialStylePreset.Black;
 
         /// <summary>
@@ -35,8 +35,8 @@ namespace Zigurous.Prototyping
             }
         }
 
-        [Tooltip("The selected pattern preset.")]
         [SerializeField]
+        [Tooltip("The selected pattern preset.")]
         private MaterialPatternPreset _pattern = MaterialPatternPreset.Pattern1;
 
         /// <summary>
