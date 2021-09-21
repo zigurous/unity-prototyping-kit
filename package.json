@@ -13,6 +13,7 @@
   "repository": "https://github.com/zigurous/unity-prototyping-kit",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.prototyping",
   "changelogUrl": "https://docs.zigurous.com/com.zigurous.prototyping/changelog",
+  "licensesUrl": "https://docs.zigurous.com/com.zigurous.prototyping/license",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },
