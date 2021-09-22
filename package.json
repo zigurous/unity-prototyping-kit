@@ -4,16 +4,22 @@
   "displayName": "Prototyping Kit",
   "description": "The Prototyping Kit package contains assets and materials for prototyping levels in Unity. The prefabs included in the package can be styled without needing to create new materials, and they are tiled automatically based on the size of the object.",
   "unity": "2019.4",
-  "keywords": [
-    "prototyping",
-    "materials",
-    "textures",
-    "grid"
-  ],
   "repository": "https://github.com/zigurous/unity-prototyping-kit",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.prototyping",
   "changelogUrl": "https://docs.zigurous.com/com.zigurous.prototyping/changelog",
   "licensesUrl": "https://docs.zigurous.com/com.zigurous.prototyping/license",
+  "keywords": [
+    "prototyping",
+    "materials",
+    "textures",
+    "grid",
+    "checkerboard",
+    "tiling",
+    "models",
+    "prefabs",
+    "ramps",
+    "stairs"
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },
