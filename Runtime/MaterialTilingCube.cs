@@ -19,24 +19,24 @@ namespace Zigurous.Prototyping
         /// <inheritdoc/>
         protected override void UpdateMaterials()
         {
-            if (this.renderer.materials != null)
+            if (renderer.materials != null)
             {
-                Vector3 scale = this.transform.lossyScale;
+                Vector3 scale = transform.lossyScale;
 
-                SetTextureScale(this.renderer.materials[0], new Vector2(scale.z, scale.y));
-                SetTextureScale(this.renderer.materials[1], new Vector2(scale.x, scale.z));
-                SetTextureScale(this.renderer.materials[2], new Vector2(scale.x, scale.y));
+                SetTextureScale(renderer.materials[0], new Vector2(scale.z, scale.y));
+                SetTextureScale(renderer.materials[1], new Vector2(scale.x, scale.z));
+                SetTextureScale(renderer.materials[2], new Vector2(scale.x, scale.y));
             }
         }
 
         /// <inheritdoc/>
         protected override void UpdateMaterialsInEditor()
         {
-            Material[] sharedMaterials = this.renderer.sharedMaterials;
+            Material[] sharedMaterials = renderer.sharedMaterials;
 
             if (sharedMaterials != null)
             {
-                Material sharedMaterial = this.renderer.sharedMaterial;
+                Material sharedMaterial = renderer.sharedMaterial;
 
                 if (sharedMaterial != null && _sharedInstanceId != sharedMaterial.GetInstanceID())
                 {
@@ -46,14 +46,14 @@ namespace Zigurous.Prototyping
                         sharedMaterials[i] = new Material(sharedMaterial);
                     }
 
-                    this.renderer.sharedMaterials = sharedMaterials;
+                    renderer.sharedMaterials = sharedMaterials;
                 }
 
-                Vector3 scale = this.transform.lossyScale;
+                Vector3 scale = transform.lossyScale;
 
-                SetTextureScale(this.renderer.sharedMaterials[0], new Vector2(scale.z, scale.y));
-                SetTextureScale(this.renderer.sharedMaterials[1], new Vector2(scale.x, scale.z));
-                SetTextureScale(this.renderer.sharedMaterials[2], new Vector2(scale.x, scale.y));
+                SetTextureScale(renderer.sharedMaterials[0], new Vector2(scale.z, scale.y));
+                SetTextureScale(renderer.sharedMaterials[1], new Vector2(scale.x, scale.z));
+                SetTextureScale(renderer.sharedMaterials[2], new Vector2(scale.x, scale.y));
             }
         }
 

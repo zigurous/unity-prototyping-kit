@@ -63,15 +63,15 @@ namespace Zigurous.Prototyping
         /// <returns>A new material instance for the given preset.</returns>
         public Material CreateMaterialInstance(MaterialStylePreset preset)
         {
-            if (this.baseMaterial == null) {
+            if (baseMaterial == null) {
                 return null;
             }
 
-            Material material = new Material(this.baseMaterial);
+            Material material = new Material(baseMaterial);
 
-            for (int i = 0; i < this.styles.Length; i++)
+            for (int i = 0; i < styles.Length; i++)
             {
-                Style style = this.styles[i];
+                Style style = styles[i];
 
                 if (style.preset == preset)
                 {

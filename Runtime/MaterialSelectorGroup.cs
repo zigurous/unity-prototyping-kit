@@ -61,7 +61,7 @@ namespace Zigurous.Prototyping
 
         private void OnValidate()
         {
-            if (this.enabled) {
+            if (enabled) {
                 UpdateGroup();
             }
         }
@@ -71,7 +71,7 @@ namespace Zigurous.Prototyping
             MaterialSelector[] selectors = GetComponentsInChildren<MaterialSelector>();
 
             for (int i = 0; i < selectors.Length; i++) {
-                selectors[i].Apply(this.style, this.pattern);
+                selectors[i].Apply(style, pattern);
             }
         }
 

@@ -42,13 +42,13 @@ namespace Zigurous.Prototyping
         /// <returns>The texture asset for the preset.</returns>
         public Texture2D GetTexture(MaterialPatternPreset preset)
         {
-            if (this.patterns == null) {
+            if (patterns == null) {
                 return null;
             }
 
-            for (int i = 0; i < this.patterns.Length; i++)
+            for (int i = 0; i < patterns.Length; i++)
             {
-                Pattern pattern = this.patterns[i];
+                Pattern pattern = patterns[i];
 
                 if (pattern.preset == preset) {
                     return pattern.texture;
@@ -65,13 +65,13 @@ namespace Zigurous.Prototyping
         /// <param name="preset">The preset to apply.</param>
         public void SetTexture(Material material, MaterialPatternPreset preset)
         {
-            if (this.patterns == null) {
+            if (patterns == null) {
                 return;
             }
 
-            for (int i = 0; i < this.patterns.Length; i++)
+            for (int i = 0; i < patterns.Length; i++)
             {
-                Pattern pattern = this.patterns[i];
+                Pattern pattern = patterns[i];
 
                 if (pattern.preset == preset)
                 {

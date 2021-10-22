@@ -37,17 +37,17 @@ namespace Zigurous.Prototyping
 
         private void OnValidate()
         {
-            if (this.enabled) {
+            if (enabled) {
                 Tile();
             }
         }
 
         private void LateUpdate()
         {
-            if (this.autoUpdate && this.transform.hasChanged)
+            if (autoUpdate && transform.hasChanged)
             {
                 Tile();
-                this.transform.hasChanged = false;
+                transform.hasChanged = false;
             }
         }
 
@@ -62,8 +62,8 @@ namespace Zigurous.Prototyping
             }
             #endif
 
-            if (this.renderer == null) {
-                this.renderer = GetComponent<Renderer>();
+            if (renderer == null) {
+                renderer = GetComponent<Renderer>();
             }
 
             if (Application.isPlaying)
@@ -71,7 +71,7 @@ namespace Zigurous.Prototyping
                 UpdateMaterials();
             }
             #if UNITY_EDITOR
-            else if (this.updateInEditor)
+            else if (updateInEditor)
             {
                 UpdateMaterialsInEditor();
             }

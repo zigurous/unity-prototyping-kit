@@ -19,25 +19,25 @@ namespace Zigurous.Prototyping
         /// <inheritdoc/>
         protected override void UpdateMaterials()
         {
-            Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10f);
-            SetTextureScale(this.renderer.material, new Vector2(scale.x, scale.z));
+            Vector3 scale = Vector3.Scale(transform.lossyScale, Vector3.one * 10f);
+            SetTextureScale(renderer.material, new Vector2(scale.x, scale.z));
         }
 
         /// <inheritdoc/>
         protected override void UpdateMaterialsInEditor()
         {
-            Material sharedMaterial = this.renderer.sharedMaterial;
+            Material sharedMaterial = renderer.sharedMaterial;
 
             if (sharedMaterial != null)
             {
                 if (_sharedInstanceId != sharedMaterial.GetInstanceID())
                 {
-                    this.renderer.sharedMaterial = new Material(sharedMaterial);
+                    renderer.sharedMaterial = new Material(sharedMaterial);
                     _sharedInstanceId = sharedMaterial.GetInstanceID();
                 }
 
-                Vector3 scale = Vector3.Scale(this.transform.lossyScale, Vector3.one * 10f);
-                SetTextureScale(this.renderer.sharedMaterial, new Vector2(scale.x, scale.z));
+                Vector3 scale = Vector3.Scale(transform.lossyScale, Vector3.one * 10f);
+                SetTextureScale(renderer.sharedMaterial, new Vector2(scale.x, scale.z));
             }
         }
 

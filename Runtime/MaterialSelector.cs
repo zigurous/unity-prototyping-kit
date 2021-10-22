@@ -84,14 +84,14 @@ namespace Zigurous.Prototyping
 
         private void OnValidate()
         {
-            if (this.enabled) {
+            if (enabled) {
                 UpdateRenderer();
             }
         }
 
         private void UpdateRenderer()
         {
-            if (this.styles == null) {
+            if (styles == null) {
                 return;
             }
 
@@ -101,8 +101,8 @@ namespace Zigurous.Prototyping
             }
             #endif
 
-            if (this.renderer == null) {
-                this.renderer = GetComponent<Renderer>();
+            if (renderer == null) {
+                renderer = GetComponent<Renderer>();
             }
 
             if (Application.isPlaying) {
@@ -120,43 +120,43 @@ namespace Zigurous.Prototyping
 
         private void UpdateMaterials()
         {
-            Material[] materials = this.renderer.materials;
+            Material[] materials = renderer.materials;
 
             if (materials != null)
             {
                 for (int i = 0; i < materials.Length; i++)
                 {
-                    Material material = this.styles.CreateMaterialInstance(this.style);
+                    Material material = styles.CreateMaterialInstance(style);
 
-                    if (this.patterns != null) {
-                        this.patterns.SetTexture(material, this.pattern);
+                    if (patterns != null) {
+                        patterns.SetTexture(material, pattern);
                     }
 
                     materials[i] = material;
                 }
 
-                this.renderer.materials = materials;
+                renderer.materials = materials;
             }
         }
 
         private void UpdateSharedMaterials()
         {
-            Material[] materials = this.renderer.sharedMaterials;
+            Material[] materials = renderer.sharedMaterials;
 
             if (materials != null)
             {
                 for (int i = 0; i < materials.Length; i++)
                 {
-                    Material material = this.styles.CreateMaterialInstance(this.style);
+                    Material material = styles.CreateMaterialInstance(style);
 
-                    if (this.patterns != null) {
-                        this.patterns.SetTexture(material, this.pattern);
+                    if (patterns != null) {
+                        patterns.SetTexture(material, pattern);
                     }
 
                     materials[i] = material;
                 }
 
-                this.renderer.sharedMaterials = materials;
+                renderer.sharedMaterials = materials;
             }
         }
 
