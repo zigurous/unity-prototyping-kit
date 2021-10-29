@@ -14,7 +14,7 @@ namespace Zigurous.Prototyping
         /// made and new material copies can be created. This is required for
         /// updating in the editor.
         /// </summary>
-        private int _sharedInstanceId = -1;
+        private int sharedInstanceId = -1;
 
         /// <inheritdoc/>
         protected override void UpdateMaterials()
@@ -30,10 +30,10 @@ namespace Zigurous.Prototyping
 
             if (sharedMaterial != null)
             {
-                if (_sharedInstanceId != sharedMaterial.GetInstanceID())
+                if (sharedInstanceId != sharedMaterial.GetInstanceID())
                 {
                     renderer.sharedMaterial = new Material(sharedMaterial);
-                    _sharedInstanceId = sharedMaterial.GetInstanceID();
+                    sharedInstanceId = sharedMaterial.GetInstanceID();
                 }
 
                 Vector3 scale = Vector3.Scale(transform.lossyScale, Vector3.one * 4f);
