@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58158faa0b43144aaf45ee4f8b64494, type: 3}
   m_Name: PrototypingMaterialStyles
   m_EditorClassIdentifier: 
-  baseMaterial: {fileID: 2100000, guid: 60755ffdb5736eb4ea955b3cb760a9ff, type: 2}
   styles:
   - preset: 1
     color: {r: 0, g: 0, b: 0, a: 1}
@@ -39,58 +38,58 @@ MonoBehaviour:
     metallic: 0
     smoothness: 0
   - preset: 7
-    color: {r: 0.2509804, g: 0.10457517, b: 0, a: 1}
+    color: {r: 0.4, g: 0.22, b: 0.04000001, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 8
-    color: {r: 0.45, g: 0, b: 0, a: 1}
+    color: {r: 0.7, g: 0.06862745, b: 0.06862745, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 9
-    color: {r: 0.54901963, g: 0.22875819, b: 0, a: 1}
+    color: {r: 0.8, g: 0.4392157, b: 0.07843137, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 10
-    color: {r: 0.54901963, g: 0.3660131, b: 0, a: 1}
+    color: {r: 0.9, g: 0.70147055, b: 0.08823529, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 11
-    color: {r: 0.2928105, g: 0.5019608, b: 0, a: 1}
+    color: {r: 0.5040491, g: 0.8, b: 0.08000002, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 12
-    color: {r: 0, g: 0.45, b: 0.038671874, a: 1}
+    color: {r: 0.06862745, g: 0.7, b: 0.11437907, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 13
-    color: {r: 0, g: 0.5019608, b: 0.3346406, a: 1}
+    color: {r: 0.08000002, g: 0.8, b: 0.5614724, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 14
-    color: {r: 0, g: 0.5, b: 0.5, a: 1}
+    color: {r: 0.08000002, g: 0.8, b: 0.8, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 15
-    color: {r: 0, g: 0.33464047, b: 0.5019608, a: 1}
+    color: {r: 0.08000002, g: 0.5614724, b: 0.8, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 16
-    color: {r: 0, g: 0.20869565, b: 0.5, a: 1}
+    color: {r: 0.08000002, g: 0.3185276, b: 0.8, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 17
-    color: {r: 0.16732012, g: 0, b: 0.5019608, a: 1}
+    color: {r: 0.19926383, g: 0.08000002, b: 0.8, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 18
-    color: {r: 0.33333325, g: 0, b: 0.5, a: 1}
+    color: {r: 0.4377914, g: 0.08000002, b: 0.8, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 19
-    color: {r: 0.45, g: 0, b: 0.45, a: 1}
+    color: {r: 0.6807362, g: 0.08000002, b: 0.8, a: 1}
     metallic: 0
     smoothness: 0
   - preset: 20
-    color: {r: 0.55, g: 0.1375, b: 0.41249993, a: 1}
+    color: {r: 0.8, g: 0.24000001, b: 0.6118032, a: 1}
     metallic: 0
     smoothness: 0

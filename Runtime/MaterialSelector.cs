@@ -13,6 +13,9 @@ namespace Zigurous.Prototyping
     [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Selector")]
     public sealed class MaterialSelector : MonoBehaviour
     {
+        private static readonly int _Metallic = Shader.PropertyToID("_Metallic");
+        private static readonly int _Smoothness = Shader.PropertyToID("_Glossiness");
+
         /// <summary>
         /// The renderer that holds the material being selected (Read only).
         /// </summary>
@@ -20,12 +23,12 @@ namespace Zigurous.Prototyping
 
         [SerializeField]
         [Tooltip("The selected style preset.")]
-        private MaterialStylePreset m_Style = MaterialStylePreset.Black;
+        private MaterialStyle.Preset m_Style = MaterialStyle.Preset.Black;
 
         /// <summary>
         /// The selected style preset.
         /// </summary>
-        public MaterialStylePreset style
+        public MaterialStyle.Preset style
         {
             get => m_Style;
             set
@@ -37,12 +40,12 @@ namespace Zigurous.Prototyping
 
         [SerializeField]
         [Tooltip("The selected pattern preset.")]
-        private MaterialPatternPreset m_Pattern = MaterialPatternPreset.Pattern1;
+        private MaterialPattern.Preset m_Pattern = MaterialPattern.Preset.Pattern1;
 
         /// <summary>
         /// The selected pattern preset.
         /// </summary>
-        public MaterialPatternPreset pattern
+        public MaterialPattern.Preset pattern
         {
             get => m_Pattern;
             set
@@ -69,7 +72,7 @@ namespace Zigurous.Prototyping
         /// </summary>
         /// <param name="style">The style to apply.</param>
         /// <param name="pattern">The pattern to apply.</param>
-        public void Apply(MaterialStylePreset style, MaterialPatternPreset pattern)
+        public void Apply(MaterialStyle.Preset style, MaterialPattern.Preset pattern)
         {
             m_Style = style;
             m_Pattern = pattern;
@@ -124,15 +127,8 @@ namespace Zigurous.Prototyping
 
             if (materials != null)
             {
-                for (int i = 0; i < materials.Length; i++)
-                {
-                    Material material = styles.CreateMaterialInstance(style);
-
-                    if (patterns != null) {
-                        patterns.SetTexture(material, pattern);
-                    }
-
-                    materials[i] = material;
+                for (int i = 0; i < materials.Length; i++) {
+                    materials[i] = CreateMaterial();
                 }
 
                 renderer.materials = materials;
@@ -145,19 +141,29 @@ namespace Zigurous.Prototyping
 
             if (materials != null)
             {
-                for (int i = 0; i < materials.Length; i++)
-                {
-                    Material material = styles.CreateMaterialInstance(style);
-
-                    if (patterns != null) {
-                        patterns.SetTexture(material, pattern);
-                    }
-
-                    materials[i] = material;
+                for (int i = 0; i < materials.Length; i++) {
+                    materials[i] = CreateMaterial();
                 }
 
                 renderer.sharedMaterials = materials;
             }
+        }
+
+        private Material CreateMaterial()
+        {
+            MaterialPattern pattern = patterns.GetPattern(m_Pattern);
+            MaterialStyle style = styles.GetStyle(m_Style);
+
+            if (pattern.baseMaterial == null) {
+                return null;
+            }
+
+            Material material = new Material(pattern.baseMaterial);
+            material.color = style.color;
+            material.SetFloat(_Metallic, style.metallic);
+            material.SetFloat(_Smoothness, style.smoothness);
+
+            return material;
         }
 
     }

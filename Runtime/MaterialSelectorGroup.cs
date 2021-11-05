@@ -10,12 +10,12 @@ namespace Zigurous.Prototyping
     {
         [SerializeField]
         [Tooltip("The selected style preset.")]
-        private MaterialStylePreset m_Style = MaterialStylePreset.Black;
+        private MaterialStyle.Preset m_Style = MaterialStyle.Preset.Black;
 
         /// <summary>
         /// The selected style preset.
         /// </summary>
-        public MaterialStylePreset style
+        public MaterialStyle.Preset style
         {
             get => m_Style;
             set
@@ -27,12 +27,12 @@ namespace Zigurous.Prototyping
 
         [SerializeField]
         [Tooltip("The selected pattern preset.")]
-        private MaterialPatternPreset m_Pattern = MaterialPatternPreset.Pattern1;
+        private MaterialPattern.Preset m_Pattern = MaterialPattern.Preset.Pattern1;
 
         /// <summary>
         /// The selected pattern preset.
         /// </summary>
-        public MaterialPatternPreset pattern
+        public MaterialPattern.Preset pattern
         {
             get => m_Pattern;
             set

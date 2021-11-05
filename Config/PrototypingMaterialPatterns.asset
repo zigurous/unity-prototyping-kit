@@ -14,30 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patterns:
   - preset: 0
-    texture: {fileID: 2800000, guid: 34747ceda276b36409ca5b5bf6f68def, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 8e8843f57bb90854e95abfd52f9553d0, type: 2}
   - preset: 1
-    texture: {fileID: 2800000, guid: 05c9e8b5b79502a47859f3734f6160b1, type: 3}
+    baseMaterial: {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   - preset: 2
-    texture: {fileID: 2800000, guid: 8d0cd86e8f054f04fb4c5243fdc2ceb1, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   - preset: 3
-    texture: {fileID: 2800000, guid: d0aa26e7b67f4864e9271604229ea885, type: 3}
+    baseMaterial: {fileID: 2100000, guid: b97db0967e87e834da0b544343e7b32d, type: 2}
   - preset: 4
-    texture: {fileID: 2800000, guid: 8151f99081a94ec418104b583d3aa595, type: 3}
+    baseMaterial: {fileID: 2100000, guid: e8a89f458e44ebc42b25afa04ad34253, type: 2}
   - preset: 5
-    texture: {fileID: 2800000, guid: 4bf8070568172cc498692609799ef4e2, type: 3}
+    baseMaterial: {fileID: 2100000, guid: a3b02de19ec04c54f93f673478f85034, type: 2}
   - preset: 6
-    texture: {fileID: 2800000, guid: 328262f2ec13714428fbcfbf7be7c28a, type: 3}
+    baseMaterial: {fileID: 2100000, guid: ff401d0bf98c56e43bfa97b909bded43, type: 2}
   - preset: 7
-    texture: {fileID: 2800000, guid: ed41563dfd640664c8f5858c74038737, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 77f39da924299a847907f88721a354c1, type: 2}
   - preset: 8
-    texture: {fileID: 2800000, guid: 1ff2e8d90477d614f9e942d2696288f3, type: 3}
+    baseMaterial: {fileID: 2100000, guid: c7d721de5e2f71341bc71784d6970195, type: 2}
   - preset: 9
-    texture: {fileID: 2800000, guid: 3b19f5ed9f94081459456a063854316f, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 1edf8d9c471dee347b14a49c24d02a46, type: 2}
   - preset: 10
-    texture: {fileID: 2800000, guid: eee0634678330f5499128fa899b4ac2c, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 562683af4c02bce47a83da9e7f787336, type: 2}
   - preset: 11
-    texture: {fileID: 2800000, guid: 7a93c47dede5a24429014829494af13b, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 33807bf1771af0a43b819f6efa72ce29, type: 2}
   - preset: 12
-    texture: {fileID: 2800000, guid: 1643c68576815454a9fd6dbb4c63e5cc, type: 3}
-  - preset: 13
-    texture: {fileID: 2800000, guid: 85348baff7f3ee847b87cd5c1a6fbd95, type: 3}
+    baseMaterial: {fileID: 2100000, guid: 4dcf95e060184d040b1e2a46f5c90993, type: 2}

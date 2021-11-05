@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cubemap_Template
+  m_Name: CubemapTemplate
   m_Shader: {fileID: 4800000, guid: 7f24a6a03779a954fa7b6c292319ede3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

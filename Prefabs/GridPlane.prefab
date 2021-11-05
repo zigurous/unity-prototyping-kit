@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1885256717884521776}
   - component: {fileID: 6627544534245019902}
   m_Layer: 0
-  m_Name: Grid-Plane
+  m_Name: GridPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 60755ffdb5736eb4ea955b3cb760a9ff, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _style: 2
-  _pattern: 0
+  m_Style: 2
+  m_Pattern: 1
   styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
   patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &6627544534245019902
