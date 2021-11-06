@@ -39,6 +39,17 @@ namespace Zigurous.Prototyping
         /// </summary>
         [Tooltip("The base material of the pattern.")]
         public Material baseMaterial;
+
+        /// <summary>
+        /// Creates a new material pattern with the specified preset.
+        /// </summary>
+        /// <param name="preset">The preset enumeration value of the pattern.</param>
+        public MaterialPattern(Preset preset, Material baseMaterial = null)
+        {
+            this.preset = preset;
+            this.baseMaterial = baseMaterial;
+        }
+
     }
 
 }

@@ -66,6 +66,19 @@ namespace Zigurous.Prototyping
         [Tooltip("The smoothness value of the material style.")]
         [Range(0f, 1f)]
         public float smoothness;
+
+        /// <summary>
+        /// Creates a new material style with the specified preset.
+        /// </summary>
+        /// <param name="preset">The preset enumeration value of the style.</param>
+        public MaterialStyle(Preset preset, Color color = default(Color), float metallic = 0f, float smoothness = 0f)
+        {
+            this.preset = preset;
+            this.color = color;
+            this.metallic = metallic;
+            this.smoothness = smoothness;
+        }
+
     }
 
 }
