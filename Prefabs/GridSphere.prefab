@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2094942954686532904}
   - component: {fileID: 4400524907561734064}
   - component: {fileID: 3224452127400539026}
-  - component: {fileID: -1125647849056049381}
+  - component: {fileID: 6527244832704856431}
   m_Layer: 0
   m_Name: GridSphere
   m_TagString: Untagged
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
---- !u!114 &-1125647849056049381
+--- !u!114 &6527244832704856431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7034211115780303770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e52bba7dbe8454b8a48502cea7ac62, type: 3}
+  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Style: 2
