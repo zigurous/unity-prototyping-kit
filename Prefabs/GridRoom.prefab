@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5025684179266096235}
   - component: {fileID: 5025684179266096228}
   - component: {fileID: 5025684179266096229}
-  - component: {fileID: 5025684179266096234}
   - component: {fileID: 5141335428833991358}
+  - component: {fileID: 6801304225971026691}
   m_Layer: 0
   m_Name: Ceiling
   m_TagString: Untagged
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,22 +96,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179266096234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179266096231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &5141335428833991358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +110,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
+--- !u!114 &6801304225971026691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179266096231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c3367dae0d844d970f321081f40ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5025684179353969942
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,8 +134,8 @@ GameObject:
   - component: {fileID: 5025684179353969946}
   - component: {fileID: 5025684179353969947}
   - component: {fileID: 5025684179353969940}
-  - component: {fileID: 5025684179353969945}
   - component: {fileID: 2610430046463933631}
+  - component: {fileID: 2210672792598031024}
   m_Layer: 0
   m_Name: Wall-Forward
   m_TagString: Untagged
@@ -187,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -222,22 +218,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179353969945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179353969942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &2610430046463933631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +232,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
+--- !u!114 &2210672792598031024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179353969942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c3367dae0d844d970f321081f40ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5025684179370061013
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +256,8 @@ GameObject:
   - component: {fileID: 5025684179370061017}
   - component: {fileID: 5025684179370061018}
   - component: {fileID: 5025684179370061019}
-  - component: {fileID: 5025684179370061016}
   - component: {fileID: 6531502854609782675}
+  - component: {fileID: 1288092450238797801}
   m_Layer: 0
   m_Name: Wall-Right
   m_TagString: Untagged
@@ -313,7 +305,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348,22 +340,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179370061016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179370061013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &6531502854609782675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +354,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
+--- !u!114 &1288092450238797801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179370061013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c3367dae0d844d970f321081f40ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5025684179698766644
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,8 +378,8 @@ GameObject:
   - component: {fileID: 5025684179698766648}
   - component: {fileID: 5025684179698766649}
   - component: {fileID: 5025684179698766650}
-  - component: {fileID: 5025684179698766655}
   - component: {fileID: 2248564352297167178}
+  - component: {fileID: 7735237011428116853}
   m_Layer: 0
   m_Name: Wall-Left
   m_TagString: Untagged
@@ -439,7 +427,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,22 +462,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684179698766655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684179698766644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &2248564352297167178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +476,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
+--- !u!114 &7735237011428116853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684179698766644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c3367dae0d844d970f321081f40ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5025684180009710735
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,8 +500,8 @@ GameObject:
   - component: {fileID: 5025684180009710771}
   - component: {fileID: 5025684180009710732}
   - component: {fileID: 5025684180009710733}
-  - component: {fileID: 5025684180009710770}
   - component: {fileID: 1109254643499620504}
+  - component: {fileID: 4583133809175670831}
   m_Layer: 0
   m_Name: Wall-Back
   m_TagString: Untagged
@@ -565,7 +549,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -600,22 +584,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684180009710770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684180009710735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &1109254643499620504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,6 +598,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
+--- !u!114 &4583133809175670831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684180009710735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c3367dae0d844d970f321081f40ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5025684180060847425
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +622,8 @@ GameObject:
   - component: {fileID: 5025684180060847429}
   - component: {fileID: 5025684180060847430}
   - component: {fileID: 5025684180060847431}
-  - component: {fileID: 5025684180060847428}
   - component: {fileID: 5269085281791368855}
+  - component: {fileID: 7789017958211918886}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -691,7 +671,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -726,22 +706,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5025684180060847428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5025684180060847425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &5269085281791368855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,6 +720,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoUpdate: 1
   updateInEditor: 1
+--- !u!114 &7789017958211918886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5025684180060847425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134c3367dae0d844d970f321081f40ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5485174824077111992
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5485174824077111995}
   - component: {fileID: 3780694813070171017}
+  - component: {fileID: 3624979881119792317}
   m_Layer: 0
   m_Name: GridRoom
   m_TagString: Untagged
@@ -806,6 +783,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Style: 2
-  m_Pattern: 1
-  styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
+  m_Pattern: 2
+  m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
+  m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
+--- !u!114 &3624979881119792317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485174824077111992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a37279f5ff6f57469f240c0825fe3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSize: 1
+  positionIncrement: 0.25
+  scaleIncrement: 0.25
+  rotationIncrement: 15
