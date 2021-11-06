@@ -70,7 +70,11 @@ namespace Zigurous.Prototyping
         {
             MaterialSelector[] selectors = GetComponentsInChildren<MaterialSelector>();
 
-            for (int i = 0; i < selectors.Length; i++) {
+            for (int i = 0; i < selectors.Length; i++)
+            {
+                MaterialSelector selector = selectors[i];
+                selector.styles = styles;
+                selector.patterns = patterns;
                 selectors[i].Apply(style, pattern);
             }
         }
