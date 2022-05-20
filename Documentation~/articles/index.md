@@ -8,17 +8,22 @@ The **Prototyping Kit** package contains assets and materials for prototyping le
 
 <hr/>
 
-## 📌 Overview
+## Overview
 
-- [Scripting API](/api/Zigurous.Prototyping)
-- [Installation](/manual/installation)
-- [Changelog](/changelog)
-- [License](/license)
+#### ⚙️ [Installation](/installation)
+
+#### 🧰 [Scripting API](/api/Zigurous.Prototyping)
+
+#### 📋 [Changelog](/changelog)
+
+#### ⚖️ [License](/license)
 
 <hr/>
 
-## 📖 Reference
+## Reference
 
-- [Prefabs](/manual/prefabs)
-- [Materials](/manual/materials)
-- [Textures](/manual/textures)
+#### 🀄 [Prefabs](/manual/prefabs)
+
+#### ⚽ [Materials](/manual/materials)
+
+#### 🖼️ [Textures](/manual/textures)
