@@ -6,7 +6,7 @@ namespace Zigurous.Prototyping
     /// Automatically tiles the materials of a cube based on its scale.
     /// </summary>
     [ExecuteAlways]
-    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Tiling (Cube)")]
+    [AddComponentMenu("Zigurous/Prototyping/Material Tiling (Cube)")]
     public sealed class MaterialTilingCube : MaterialTiling
     {
         /// <summary>

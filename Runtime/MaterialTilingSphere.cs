@@ -6,7 +6,7 @@ namespace Zigurous.Prototyping
     /// Automatically tiles the material of a sphere based on its scale.
     /// </summary>
     [ExecuteAlways]
-    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Tiling (Sphere)")]
+    [AddComponentMenu("Zigurous/Prototyping/Material Tiling (Sphere)")]
     public sealed class MaterialTilingSphere : MaterialTiling
     {
         /// <summary>

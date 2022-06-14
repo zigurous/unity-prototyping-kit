@@ -5,7 +5,7 @@ namespace Zigurous.Prototyping
     /// <summary>
     /// Assigns a renderer's material from a preset list of options.
     /// </summary>
-    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Selector")]
+    [AddComponentMenu("Zigurous/Prototyping/Material Selector")]
     public class MaterialSelector : MaterialSelectorBase
     {
         [SerializeField]

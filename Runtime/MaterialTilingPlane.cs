@@ -6,7 +6,7 @@ namespace Zigurous.Prototyping
     /// Automatically tiles the materials of a plane based on its scale.
     /// </summary>
     [ExecuteAlways]
-    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Tiling (Plane)")]
+    [AddComponentMenu("Zigurous/Prototyping/Material Tiling (Plane)")]
     public sealed class MaterialTilingPlane : MaterialTiling
     {
         /// <summary>

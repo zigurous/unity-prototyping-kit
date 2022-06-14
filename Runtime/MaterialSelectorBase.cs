@@ -14,7 +14,7 @@ namespace Zigurous.Prototyping
     /// Applies a material style and pattern to a renderer.
     /// </summary>
     [RequireComponent(typeof(Renderer))]
-    [AddComponentMenu("Zigurous/Prototyping/Prototyping Material Selector Base")]
+    [AddComponentMenu("Zigurous/Prototyping/Material Selector Base")]
     public class MaterialSelectorBase : MonoBehaviour
     {
         private static readonly int _Metallic = Shader.PropertyToID("_Metallic");
