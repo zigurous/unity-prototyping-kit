@@ -71,6 +71,9 @@ namespace Zigurous.Prototyping
         /// Creates a new material style with the specified preset.
         /// </summary>
         /// <param name="preset">The preset enumeration value of the style.</param>
+        /// <param name="color">The color of the material style.</param>
+        /// <param name="metallic">The metallic value of the material style.</param>
+        /// <param name="smoothness">The smoothness value of the material style.</param>
         public MaterialStyle(Preset preset, Color color = default(Color), float metallic = 0f, float smoothness = 0f)
         {
             this.preset = preset;

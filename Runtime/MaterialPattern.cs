@@ -35,19 +35,36 @@ namespace Zigurous.Prototyping
         public Preset preset;
 
         /// <summary>
-        /// The base material of the pattern.
+        /// The emission map texture of the pattern.
         /// </summary>
-        [Tooltip("The base material of the pattern.")]
-        public Material baseMaterial;
+        [Tooltip("The emission map texture of the pattern.")]
+        public Texture2D emissionMap;
+
+        /// <summary>
+        /// The normal map texture of the pattern.
+        /// </summary>
+        [Tooltip("The normal map texture of the pattern.")]
+        public Texture2D normalMap;
+
+        /// <summary>
+        /// The height map texture of the pattern.
+        /// </summary>
+        [Tooltip("The height map texture of the pattern.")]
+        public Texture2D heightMap;
 
         /// <summary>
         /// Creates a new material pattern with the specified preset.
         /// </summary>
         /// <param name="preset">The preset enumeration value of the pattern.</param>
-        public MaterialPattern(Preset preset, Material baseMaterial = null)
+        /// <param name="emissionMap">The emission map texture of the pattern.</param>
+        /// <param name="normalMap">The normal map texture of the pattern.</param>
+        /// <param name="heightMap">The height map texture of the pattern.</param>
+        public MaterialPattern(Preset preset, Texture2D emissionMap = null, Texture2D normalMap = null, Texture2D heightMap = null)
         {
             this.preset = preset;
-            this.baseMaterial = baseMaterial;
+            this.emissionMap = emissionMap;
+            this.normalMap = normalMap;
+            this.heightMap = heightMap;
         }
 
     }

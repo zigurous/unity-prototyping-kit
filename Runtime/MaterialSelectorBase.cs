@@ -7,6 +7,7 @@ using UnityEditor.Experimental.SceneManagement;
 #endif
 #endif
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Zigurous.Prototyping
 {
@@ -18,7 +19,16 @@ namespace Zigurous.Prototyping
     public class MaterialSelectorBase : MonoBehaviour
     {
         private static readonly int _Metallic = Shader.PropertyToID("_Metallic");
-        private static readonly int _Smoothness = Shader.PropertyToID("_Glossiness");
+        private static readonly int _Glossiness = Shader.PropertyToID("_Glossiness");
+        private static readonly int _Smoothness = Shader.PropertyToID("_Smoothness");
+        private static readonly int _EmissionColor = Shader.PropertyToID("_EmissionColor");
+        private static readonly int _EmissionMap = Shader.PropertyToID("_EmissionMap");
+        private static readonly int _EmissiveColor = Shader.PropertyToID("_EmissiveColor");
+        private static readonly int _EmissiveColorMap = Shader.PropertyToID("_EmissiveColorMap");
+        private static readonly int _NormalMap = Shader.PropertyToID("_NormalMap");
+        private static readonly int _BumpMap = Shader.PropertyToID("_BumpMap");
+        private static readonly int _HeightMap = Shader.PropertyToID("_HeightMap");
+        private static readonly int _ParallaxMap = Shader.PropertyToID("_ParallaxMap");
 
         /// <summary>
         /// The renderer that holds the material being selected (Read only).
@@ -73,14 +83,36 @@ namespace Zigurous.Prototyping
 
         protected Material CreateMaterial(MaterialStyle style, MaterialPattern pattern)
         {
-            if (pattern.baseMaterial == null) {
-                return null;
+            Shader shader;
+
+            if (GraphicsSettings.currentRenderPipeline != null) {
+                shader = GraphicsSettings.currentRenderPipeline.defaultShader;
+            } else {
+                shader = Shader.Find("Standard");
             }
 
-            Material material = new Material(pattern.baseMaterial);
+            Material material = new Material(shader);
+
             material.color = style.color;
+            material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive;
+
+            // Standard
             material.SetFloat(_Metallic, style.metallic);
+            material.SetFloat(_Glossiness, style.smoothness);
+            material.SetColor(_EmissionColor, Color.white);
+            material.SetTexture(_EmissionMap, pattern.emissionMap);
+            material.SetTexture(_BumpMap, pattern.normalMap);
+            material.SetTexture(_ParallaxMap, pattern.heightMap);
+            material.EnableKeyword("_EMISSION");
+            material.EnableKeyword("_NORMALMAP");
+            material.EnableKeyword("_PARALLAXMAP");
+
+            // HDRP
             material.SetFloat(_Smoothness, style.smoothness);
+            material.SetColor(_EmissiveColor, Color.white);
+            material.SetTexture(_EmissiveColorMap, pattern.emissionMap);
+            material.SetTexture(_NormalMap, pattern.normalMap);
+            material.SetTexture(_HeightMap, pattern.heightMap);
 
             return material;
         }
