@@ -1,0 +1,15 @@
+apiRules:
+- exclude:
+    uidRegex: ^System
+- exclude:
+    uidRegex: ^UnityEngine
+- exclude:
+    uidRegex: ^UnityEditor
+- exclude:
+    uidRegex: ^Zigurous.Prototyping.MaterialSelector.m_Style
+- exclude:
+    uidRegex: ^Zigurous.Prototyping.MaterialSelector.m_Styles
+- exclude:
+    uidRegex: ^Zigurous.Prototyping.MaterialSelector.m_Pattern
+- exclude:
+    uidRegex: ^Zigurous.Prototyping.MaterialSelector.m_Patterns

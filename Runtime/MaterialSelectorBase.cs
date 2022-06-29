@@ -81,7 +81,13 @@ namespace Zigurous.Prototyping
             }
         }
 
-        protected Material CreateMaterial(MaterialStyle style, MaterialPattern pattern)
+        /// <summary>
+        /// Creates a material from the selected style and pattern.
+        /// </summary>
+        /// <param name="style">The style to apply.</param>
+        /// <param name="pattern">The pattern to apply.</param>
+        /// <returns>The created material.</returns>
+        public virtual Material CreateMaterial(MaterialStyle style, MaterialPattern pattern)
         {
             Shader shader;
 

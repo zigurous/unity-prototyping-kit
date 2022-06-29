@@ -72,12 +72,12 @@ namespace Zigurous.Prototyping
         /// <summary>
         /// Applies the preset style and pattern to the object.
         /// </summary>
-        /// <param name="presetStyle">The style preset to apply.</param>
-        /// <param name="presetPattern">The pattern preset to apply.</param>
-        public void Apply(MaterialStyle.Preset presetStyle, MaterialPattern.Preset presetPattern)
+        /// <param name="stylePreset">The style preset to apply.</param>
+        /// <param name="patternPreset">The pattern preset to apply.</param>
+        public void Apply(MaterialStyle.Preset stylePreset, MaterialPattern.Preset patternPreset)
         {
-            MaterialStyle style = styles != null ? styles.GetStyle(presetStyle) : new MaterialStyle(presetStyle);
-            MaterialPattern pattern = patterns != null ? patterns.GetPattern(presetPattern) : new MaterialPattern(presetPattern);
+            MaterialStyle style = styles != null ? styles.GetStyle(stylePreset) : new MaterialStyle(stylePreset);
+            MaterialPattern pattern = patterns != null ? patterns.GetPattern(patternPreset) : new MaterialPattern(patternPreset);
 
             Apply(style, pattern);
         }
