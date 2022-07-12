@@ -14,4 +14,4 @@ Many of the prefabs included in the package are configured with a [Material Sele
 
 A style is defined by color, metallic, and smoothness values. A pattern is defined by a texture (see the [Textures](/manual/textures) manual). You can also create your own palettes from the asset creation menu `Assets > Create > Zigurous > Prototyping` in the Unity editor.
 
-<img src="../images/Material-Selector.png" width="600">
+<img src="../images/MaterialSelector.png" width="600">
