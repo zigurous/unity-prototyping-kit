@@ -20,6 +20,13 @@
     "ramps",
     "stairs"
   ],
+  "samples": [
+    {
+      "displayName": "Playground",
+      "description": "Unity playground scene reconstructed with the Prototyping Kit.",
+      "path": "Samples~/Playground"
+    }
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@zigurous"
   },
