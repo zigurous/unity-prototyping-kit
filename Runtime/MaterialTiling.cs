@@ -25,6 +25,12 @@ namespace Zigurous.Prototyping
         public new Renderer renderer { get; private set; }
 
         /// <summary>
+        /// The texture scale multiplier of the material being tiled.
+        /// </summary>
+        [Tooltip("The texture scale multiplier of the material being tiled.")]
+        public float scaleMultiplier = 1f;
+
+        /// <summary>
         /// Whether the material texture(s) are tiled automatically when the
         /// transform changes.
         /// </summary>
@@ -90,7 +96,7 @@ namespace Zigurous.Prototyping
         protected void SetTextureScale(Material material, Vector2 scale)
         {
             if (material != null) {
-                material.SetTextureScale(_MainTex, scale);
+                material.SetTextureScale(_MainTex, scale * scaleMultiplier);
             }
         }
 
