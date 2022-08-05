@@ -113,7 +113,7 @@ namespace Zigurous.Prototyping
             material.EnableKeyword("_NORMALMAP");
             material.EnableKeyword("_PARALLAXMAP");
 
-            // HDRP
+            // HDRP/URP
             material.SetFloat(_Smoothness, style.smoothness);
             material.SetColor(_EmissiveColor, Color.white);
             material.SetTexture(_EmissiveColorMap, pattern.emissionMap);

@@ -17,8 +17,6 @@ namespace Zigurous.Prototyping
     [RequireComponent(typeof(Renderer))]
     public abstract class MaterialTiling : MonoBehaviour
     {
-        private static int _MainTex = Shader.PropertyToID("_MainTex");
-
         /// <summary>
         /// The renderer component of the material being tiled (Read only).
         /// </summary>
@@ -96,7 +94,7 @@ namespace Zigurous.Prototyping
         protected void SetTextureScale(Material material, Vector2 scale)
         {
             if (material != null) {
-                material.SetTextureScale(_MainTex, scale * scaleMultiplier);
+                material.mainTextureScale = scale * scaleMultiplier;
             }
         }
 
