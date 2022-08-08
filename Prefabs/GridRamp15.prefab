@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7407664275726308431}
-  - component: {fileID: 2297441663743918783}
   - component: {fileID: 7407664275726308424}
+  - component: {fileID: 2297441663743918783}
   m_Layer: 0
   m_Name: GridRamp15
   m_TagString: Untagged
@@ -33,22 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2297441663743918783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7407664275726308425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Style: 2
-  m_Pattern: 2
-  m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
-  m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!114 &7407664275726308424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +49,22 @@ MonoBehaviour:
   positionIncrement: 0.25
   scaleIncrement: 0.25
   rotationIncrement: 15
+--- !u!114 &2297441663743918783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7407664275726308425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Style: 2
+  m_Pattern: 2
+  m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
+  m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
 --- !u!1 &7641525241763691376
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   scaleMultiplier: 1
   autoUpdate: 1
   updateInEditor: 1
+  sharedInstanceId: -1
 --- !u!114 &6292673872288955803
 MonoBehaviour:
   m_ObjectHideFlags: 0

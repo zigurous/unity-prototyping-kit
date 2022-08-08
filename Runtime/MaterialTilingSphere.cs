@@ -9,13 +9,6 @@ namespace Zigurous.Prototyping
     [AddComponentMenu("Zigurous/Prototyping/Material Tiling (Sphere)")]
     public sealed class MaterialTilingSphere : MaterialTiling
     {
-        /// <summary>
-        /// The instance id of the shared material to detect when changes are
-        /// made and new material copies can be created. This is required for
-        /// updating in the editor.
-        /// </summary>
-        private int sharedInstanceId = -1;
-
         /// <inheritdoc/>
         protected override void UpdateMaterials()
         {

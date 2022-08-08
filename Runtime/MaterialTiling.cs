@@ -43,6 +43,15 @@ namespace Zigurous.Prototyping
         public bool updateInEditor = true;
         #endif
 
+        /// <summary>
+        /// The instance id of the shared material to detect when changes are
+        /// made and new material copies can be created. This is required for
+        /// updating in the editor.
+        /// </summary>
+        [SerializeField]
+        [HideInInspector]
+        internal int sharedInstanceId = -1;
+
         private void OnValidate()
         {
             if (enabled) {
@@ -84,6 +93,15 @@ namespace Zigurous.Prototyping
                 UpdateMaterialsInEditor();
             }
             #endif
+        }
+
+        /// <summary>
+        /// Forces the materials to be updated.
+        /// </summary>
+        public void ForceUpdate()
+        {
+            sharedInstanceId = -1;
+            Tile();
         }
 
         /// <summary>
