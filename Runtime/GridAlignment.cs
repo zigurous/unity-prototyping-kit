@@ -64,10 +64,16 @@ namespace Zigurous.Prototyping
         /// <returns>The vector snapped to the grid.</returns>
         public Vector3 Snap(Vector3 vector, float increment)
         {
+            if (increment == 0f) {
+                return vector;
+            }
+
             float factor = increment * unitSize;
+
             vector.x = Mathf.Round(vector.x / factor) * factor;
             vector.y = Mathf.Round(vector.y / factor) * factor;
             vector.z = Mathf.Round(vector.z / factor) * factor;
+
             return vector;
         }
 
