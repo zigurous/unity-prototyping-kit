@@ -6,8 +6,7 @@ namespace Zigurous.Prototyping
     /// Assigns a group of renderers' materials from a preset list of options.
     /// </summary>
     [AddComponentMenu("Zigurous/Prototyping/Material Selector Group")]
-    [SelectionBase]
-    public sealed class MaterialSelectorGroup : MaterialSelector
+    public sealed class MaterialSelectorGroup : MaterialSelectorBase
     {
         /// <inheritdoc/>
         public override void Apply(MaterialStyle style, MaterialPattern pattern)
@@ -15,15 +14,10 @@ namespace Zigurous.Prototyping
             m_Style = style.preset;
             m_Pattern = pattern.preset;
 
-            MaterialSelectorBase[] selectors = GetComponentsInChildren<MaterialSelectorBase>();
+            MaterialSelectorRenderer[] renderers = GetComponentsInChildren<MaterialSelectorRenderer>();
 
-            for (int i = 0; i < selectors.Length; i++)
-            {
-                MaterialSelectorBase selector = selectors[i];
-
-                if (selector != this) {
-                    selector.Apply(style, pattern);
-                }
+            for (int i = 0; i < renderers.Length; i++) {
+                renderers[i].Apply(style, pattern);
             }
         }
 

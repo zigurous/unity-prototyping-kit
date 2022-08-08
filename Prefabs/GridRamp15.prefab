@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7407664275726308431}
-  - component: {fileID: 915830229891916187}
+  - component: {fileID: 2297441663743918783}
   - component: {fileID: 7407664275726308424}
   m_Layer: 0
   m_Name: GridRamp15
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &915830229891916187
+--- !u!114 &2297441663743918783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7407664275726308425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e52bba7dbe8454b8a48502cea7ac62, type: 3}
+  m_Script: {fileID: 11500000, guid: dadd5e4f1c23749499ed46d731345ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Style: 2
