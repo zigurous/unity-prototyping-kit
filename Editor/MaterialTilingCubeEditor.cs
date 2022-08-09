@@ -2,7 +2,7 @@
 
 namespace Zigurous.Prototyping.Editor
 {
-    [CustomEditor(typeof(MaterialTilingCube))]
+    // [CustomEditor(typeof(MaterialTilingCube))]
     public sealed class MaterialTilingCubeEditor : MaterialTilingEditor
     {
     }
