@@ -15,10 +15,19 @@ namespace Zigurous.Prototyping
             if (renderer.materials != null)
             {
                 Vector3 scale = transform.lossyScale;
+                int length = renderer.materials.Length;
 
-                SetTextureScale(renderer.materials[0], new Vector2(scale.z, scale.y));
-                SetTextureScale(renderer.materials[1], new Vector2(scale.x, scale.z));
-                SetTextureScale(renderer.materials[2], new Vector2(scale.x, scale.y));
+                if (length >= 1) {
+                    SetTextureScale(renderer.materials[0], new Vector2(scale.z, scale.y));
+                }
+
+                if (length >= 2) {
+                    SetTextureScale(renderer.materials[1], new Vector2(scale.x, scale.z));
+                }
+
+                if (length >= 3) {
+                    SetTextureScale(renderer.materials[2], new Vector2(scale.x, scale.y));
+                }
             }
         }
 
