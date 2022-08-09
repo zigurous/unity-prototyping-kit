@@ -14,6 +14,8 @@ namespace Zigurous.Prototyping.Editor
             if (GUILayout.Button("Force Update", GUILayout.ExpandWidth(false), GUILayout.Height(25f))) {
                 ((MaterialTilingGroup)serializedObject.targetObject).ForceUpdate();
             }
+
+            serializedObject.ApplyModifiedProperties();
         }
 
     }
