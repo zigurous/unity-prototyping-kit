@@ -755,7 +755,6 @@ GameObject:
   - component: {fileID: 5485174824077111995}
   - component: {fileID: 3624979881119792317}
   - component: {fileID: 3780694813070171017}
-  - component: {fileID: 4144147534610155481}
   m_Layer: 0
   m_Name: GridRoom
   m_TagString: Untagged
@@ -815,17 +814,3 @@ MonoBehaviour:
   m_Pattern: 2
   m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
   m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
---- !u!114 &4144147534610155481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5485174824077111992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e92125ce30ded0f4399e532b2b4aa908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoUpdate: 1
-  updateInEditor: 1
