@@ -44,9 +44,17 @@ namespace Zigurous.Prototyping
 
                 Vector3 scale = transform.lossyScale;
 
-                SetTextureScale(renderer.sharedMaterials[0], new Vector2(scale.z, scale.y));
-                SetTextureScale(renderer.sharedMaterials[1], new Vector2(scale.x, scale.z));
-                SetTextureScale(renderer.sharedMaterials[2], new Vector2(scale.x, scale.y));
+                if (sharedMaterials.Length >= 1) {
+                    SetTextureScale(renderer.sharedMaterials[0], new Vector2(scale.z, scale.y));
+                }
+
+                if (sharedMaterials.Length >= 2) {
+                    SetTextureScale(renderer.sharedMaterials[1], new Vector2(scale.x, scale.z));
+                }
+
+                if (sharedMaterials.Length >= 3) {
+                    SetTextureScale(renderer.sharedMaterials[2], new Vector2(scale.x, scale.y));
+                }
             }
         }
 
