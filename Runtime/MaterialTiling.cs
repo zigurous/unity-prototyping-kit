@@ -74,7 +74,8 @@ namespace Zigurous.Prototyping
         public void Tile()
         {
             #if UNITY_EDITOR
-            if (PrefabUtility.IsPartOfPrefabAsset(this) || PrefabStageUtility.GetCurrentPrefabStage() != null) {
+            if (PrefabUtility.IsPartOfPrefabAsset(this) ||
+               (PrefabStageUtility.GetCurrentPrefabStage() != null && !Application.isPlaying)) {
                 return;
             }
             #endif

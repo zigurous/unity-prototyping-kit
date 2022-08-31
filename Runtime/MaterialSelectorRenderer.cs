@@ -43,7 +43,8 @@ namespace Zigurous.Prototyping
         public void Apply(MaterialStyle style, MaterialPattern pattern)
         {
             #if UNITY_EDITOR
-            if (PrefabUtility.IsPartOfPrefabAsset(this) || PrefabStageUtility.GetCurrentPrefabStage() != null) {
+            if (PrefabUtility.IsPartOfPrefabAsset(this) ||
+               (PrefabStageUtility.GetCurrentPrefabStage() != null && !Application.isPlaying)) {
                 return;
             }
             #endif
