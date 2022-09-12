@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Pattern_03
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _NORMALMAP _PARALLAXMAP
+  m_ShaderKeywords: _EMISSION _NORMALMAP _PARALLAXMAP _SPECGLOSSMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: cffcd62d26db3594cb9bf66eae542459, type: 3}
+        m_Texture: {fileID: 2800000, guid: dcd6dc776c411d5488ba62b577b067b1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 05c9e8b5b79502a47859f3734f6160b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 34747ceda276b36409ca5b5bf6f68def, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: a7e437bde05d75b4fbacf602f0e52612, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7da40f3a07bb06446b80319208222c74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
