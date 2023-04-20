@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5025684179266096235}
   - component: {fileID: 5025684179266096228}
   - component: {fileID: 5025684179266096229}
-  - component: {fileID: 5141335428833991358}
+  - component: {fileID: 7767059845682928347}
   - component: {fileID: 6801304225971026691}
   m_Layer: 0
   m_Name: Ceiling
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -96,7 +96,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5141335428833991358
+--- !u!114 &7767059845682928347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025684179266096231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1
@@ -136,10 +136,10 @@ GameObject:
   - component: {fileID: 5025684179353969946}
   - component: {fileID: 5025684179353969947}
   - component: {fileID: 5025684179353969940}
-  - component: {fileID: 2610430046463933631}
+  - component: {fileID: 1143100016421725403}
   - component: {fileID: 2210672792598031024}
   m_Layer: 0
-  m_Name: Wall-Forward
+  m_Name: Wall_Forward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,7 +185,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,7 +220,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2610430046463933631
+--- !u!114 &1143100016421725403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025684179353969942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1
@@ -260,10 +260,10 @@ GameObject:
   - component: {fileID: 5025684179370061017}
   - component: {fileID: 5025684179370061018}
   - component: {fileID: 5025684179370061019}
-  - component: {fileID: 6531502854609782675}
+  - component: {fileID: 3034145258165389721}
   - component: {fileID: 1288092450238797801}
   m_Layer: 0
-  m_Name: Wall-Right
+  m_Name: Wall_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -309,7 +309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,7 +344,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &6531502854609782675
+--- !u!114 &3034145258165389721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025684179370061013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1
@@ -384,10 +384,10 @@ GameObject:
   - component: {fileID: 5025684179698766648}
   - component: {fileID: 5025684179698766649}
   - component: {fileID: 5025684179698766650}
-  - component: {fileID: 2248564352297167178}
+  - component: {fileID: 9009037916298237550}
   - component: {fileID: 7735237011428116853}
   m_Layer: 0
-  m_Name: Wall-Left
+  m_Name: Wall_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,7 +433,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -468,7 +468,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2248564352297167178
+--- !u!114 &9009037916298237550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025684179698766644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1
@@ -508,10 +508,10 @@ GameObject:
   - component: {fileID: 5025684180009710771}
   - component: {fileID: 5025684180009710732}
   - component: {fileID: 5025684180009710733}
-  - component: {fileID: 1109254643499620504}
+  - component: {fileID: 3533626153607679866}
   - component: {fileID: 4583133809175670831}
   m_Layer: 0
-  m_Name: Wall-Back
+  m_Name: Wall_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -557,7 +557,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -592,7 +592,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1109254643499620504
+--- !u!114 &3533626153607679866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025684180009710735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 5025684180060847429}
   - component: {fileID: 5025684180060847430}
   - component: {fileID: 5025684180060847431}
-  - component: {fileID: 5269085281791368855}
+  - component: {fileID: 3203907979145931039}
   - component: {fileID: 7789017958211918886}
   m_Layer: 0
   m_Name: Floor
@@ -681,7 +681,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14fa6f90ac989e048965ff981616a316, type: 2}
+  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -716,7 +716,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5269085281791368855
+--- !u!114 &3203907979145931039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5025684180060847425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25284c0d235b0d044be805f76ca1ea3c, type: 3}
+  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scaleMultiplier: 1

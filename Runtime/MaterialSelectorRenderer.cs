@@ -75,7 +75,7 @@ namespace Zigurous.Prototyping
                 renderer.sharedMaterials = materials;
             }
 
-            MaterialTiling tiling = GetComponent<MaterialTiling>();
+            MaterialTilingBase tiling = GetComponent<MaterialTilingBase>();
 
             if (tiling != null) {
                 tiling.Tile();

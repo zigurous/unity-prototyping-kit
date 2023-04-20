@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8831012545886013805}
   - component: {fileID: 1786144288498457294}
   m_Layer: 0
-  m_Name: Cubemap-Sphere
+  m_Name: CubemapSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
