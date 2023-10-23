@@ -6,6 +6,7 @@ namespace Zigurous.Prototyping
     /// A collection of material pattern presets.
     /// </summary>
     [CreateAssetMenu(menuName = "Zigurous/Prototyping/Material Pattern Palette")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/MaterialPatternPalette")]
     public sealed class MaterialPatternPalette : ScriptableObject
     {
         /// <summary>

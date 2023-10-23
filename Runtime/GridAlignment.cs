@@ -7,6 +7,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [ExecuteAlways]
     [AddComponentMenu("Zigurous/Prototyping/Grid Alignment")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/GridAlignment")]
     public sealed class GridAlignment : MonoBehaviour
     {
         /// <summary>

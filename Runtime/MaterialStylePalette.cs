@@ -6,6 +6,7 @@ namespace Zigurous.Prototyping
     /// A collection of material style presets.
     /// </summary>
     [CreateAssetMenu(menuName = "Zigurous/Prototyping/Material Style Palette")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/MaterialStylePalette")]
     public sealed class MaterialStylePalette : ScriptableObject
     {
         /// <summary>
@@ -28,7 +29,7 @@ namespace Zigurous.Prototyping
                 }
             }
 
-            return default(MaterialStyle);
+            return default;
         }
 
     }

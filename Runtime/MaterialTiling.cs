@@ -7,6 +7,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [ExecuteAlways]
     [AddComponentMenu("Zigurous/Prototyping/Material Tiling")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/MaterialTiling")]
     public class MaterialTiling : MaterialTilingBase
     {
         /// <inheritdoc/>

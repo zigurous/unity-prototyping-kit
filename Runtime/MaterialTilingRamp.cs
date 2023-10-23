@@ -7,6 +7,7 @@ namespace Zigurous.Prototyping
     /// </summary>
     [ExecuteAlways]
     [AddComponentMenu("")]
+    [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/MaterialTilingRamp")]
     internal sealed class MaterialTilingRamp : MaterialTilingBase
     {
         /// <inheritdoc/>
