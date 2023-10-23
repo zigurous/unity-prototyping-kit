@@ -27,8 +27,6 @@ namespace Zigurous.Prototyping
             Pattern11,
             Pattern12,
             Pattern13,
-            Pattern14,
-            Pattern15,
         }
 
         /// <summary>

@@ -133,6 +133,21 @@ namespace Zigurous.Prototyping
         /// </summary>
         protected abstract void UpdateMaterialsInEditor();
 
+        #if UNITY_EDITOR
+        [MenuItem("CONTEXT/MaterialTilingBase/Force Update")]
+        private static void ContextMenu_ForceUpdate()
+        {
+            if (Selection.activeGameObject != null)
+            {
+                MaterialTilingBase tiling = Selection.activeGameObject.GetComponent<MaterialTilingBase>();
+
+                if (tiling != null) {
+                    tiling.ForceUpdate();
+                }
+            }
+        }
+        #endif
+
     }
 
 }

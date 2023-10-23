@@ -28,7 +28,7 @@ namespace Zigurous.Prototyping
                 }
             }
 
-            return default(MaterialPattern);
+            return default;
         }
 
     }

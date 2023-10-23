@@ -3,11 +3,11 @@
 namespace Zigurous.Prototyping
 {
     /// <summary>
-    /// Automatically tiles the materials of a cube based on its scale.
+    /// Automatically tiles the materials of a ramp based on its scale.
     /// </summary>
     [ExecuteAlways]
     [AddComponentMenu("")]
-    internal sealed class MaterialTilingCube : MaterialTilingBase
+    internal sealed class MaterialTilingRamp : MaterialTilingBase
     {
         /// <inheritdoc/>
         protected override void UpdateMaterials()
@@ -21,8 +21,10 @@ namespace Zigurous.Prototyping
             Vector3 scale = transform.lossyScale;
 
             SetTextureScale(materials[0], new Vector2(scale.z, scale.y));
-            SetTextureScale(materials[1], new Vector2(scale.x, scale.z));
-            SetTextureScale(materials[2], new Vector2(scale.x, scale.y));
+            SetTextureScale(materials[1], new Vector2(scale.z, scale.y));
+            SetTextureScale(materials[2], new Vector2(scale.x, scale.z));
+            SetTextureScale(materials[3], new Vector2(scale.x, scale.z));
+            SetTextureScale(materials[4], new Vector2(scale.x, scale.y));
 
             renderer.materials = materials;
         }
@@ -50,8 +52,10 @@ namespace Zigurous.Prototyping
             Vector3 scale = transform.lossyScale;
 
             SetTextureScale(sharedMaterials[0], new Vector2(scale.z, scale.y));
-            SetTextureScale(sharedMaterials[1], new Vector2(scale.x, scale.z));
-            SetTextureScale(sharedMaterials[2], new Vector2(scale.x, scale.y));
+            SetTextureScale(sharedMaterials[1], new Vector2(scale.z, scale.y));
+            SetTextureScale(sharedMaterials[2], new Vector2(scale.x, scale.z));
+            SetTextureScale(sharedMaterials[3], new Vector2(scale.x, scale.z));
+            SetTextureScale(sharedMaterials[4], new Vector2(scale.x, scale.y));
 
             renderer.sharedMaterials = sharedMaterials;
         }
