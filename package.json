@@ -1,6 +1,6 @@
 {
   "name": "com.zigurous.prototyping",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "displayName": "Prototyping Kit",
   "description": "The Prototyping Kit package contains assets and materials for prototyping levels in Unity. The prefabs included in the package can be styled without needing to create new materials, and they are tiled automatically based on the size of the object.",
   "unity": "2019.4",
