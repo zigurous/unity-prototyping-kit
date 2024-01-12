@@ -21,11 +21,11 @@ namespace Zigurous.Prototyping
 
             Vector3 scale = transform.lossyScale;
 
-            SetTextureScale(materials[0], new Vector2(scale.z, scale.y));
-            SetTextureScale(materials[1], new Vector2(scale.z, scale.y));
-            SetTextureScale(materials[2], new Vector2(scale.x, scale.z));
-            SetTextureScale(materials[3], new Vector2(scale.x, scale.z));
-            SetTextureScale(materials[4], new Vector2(scale.x, scale.y));
+            SetTextureScale(materials[0], new(scale.z, scale.y));
+            SetTextureScale(materials[1], new(scale.z, scale.y));
+            SetTextureScale(materials[2], new(scale.x, scale.z));
+            SetTextureScale(materials[3], new(scale.x, scale.z));
+            SetTextureScale(materials[4], new(scale.x, scale.y));
 
             renderer.materials = materials;
         }
@@ -52,11 +52,11 @@ namespace Zigurous.Prototyping
 
             Vector3 scale = transform.lossyScale;
 
-            SetTextureScale(sharedMaterials[0], new Vector2(scale.z, scale.y));
-            SetTextureScale(sharedMaterials[1], new Vector2(scale.z, scale.y));
-            SetTextureScale(sharedMaterials[2], new Vector2(scale.x, scale.z));
-            SetTextureScale(sharedMaterials[3], new Vector2(scale.x, scale.z));
-            SetTextureScale(sharedMaterials[4], new Vector2(scale.x, scale.y));
+            SetTextureScale(sharedMaterials[0], new(scale.z, scale.y));
+            SetTextureScale(sharedMaterials[1], new(scale.z, scale.y));
+            SetTextureScale(sharedMaterials[2], new(scale.x, scale.z));
+            SetTextureScale(sharedMaterials[3], new(scale.x, scale.z));
+            SetTextureScale(sharedMaterials[4], new(scale.x, scale.y));
 
             renderer.sharedMaterials = sharedMaterials;
         }

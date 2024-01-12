@@ -139,9 +139,7 @@ namespace Zigurous.Prototyping
         {
             if (Selection.activeGameObject != null)
             {
-                MaterialTilingBase tiling = Selection.activeGameObject.GetComponent<MaterialTilingBase>();
-
-                if (tiling != null) {
+                if (Selection.activeGameObject.TryGetComponent(out MaterialTilingBase tiling)) {
                     tiling.ForceUpdate();
                 }
             }

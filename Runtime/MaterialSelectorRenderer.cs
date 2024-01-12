@@ -76,9 +76,7 @@ namespace Zigurous.Prototyping
                 renderer.sharedMaterials = materials;
             }
 
-            MaterialTilingBase tiling = GetComponent<MaterialTilingBase>();
-
-            if (tiling != null) {
+            if (TryGetComponent(out MaterialTilingBase tiling)) {
                 tiling.Tile();
             }
         }
@@ -99,10 +97,11 @@ namespace Zigurous.Prototyping
                 shader = Shader.Find("Standard");
             }
 
-            Material material = new Material(shader);
-
-            material.color = style.color;
-            material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive;
+            Material material = new(shader)
+            {
+                color = style.color,
+                globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive
+            };
 
             // Standard
             material.SetFloat(_Metallic, style.metallic);
