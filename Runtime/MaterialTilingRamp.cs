@@ -6,9 +6,9 @@ namespace Zigurous.Prototyping
     /// Automatically tiles the materials of a ramp based on its scale.
     /// </summary>
     [ExecuteAlways]
-    [AddComponentMenu("")]
+    [AddComponentMenu("Zigurous/Prototyping/Material Tiling (Ramp)")]
     [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/MaterialTilingRamp")]
-    internal sealed class MaterialTilingRamp : MaterialTilingBase
+    public sealed class MaterialTilingRamp : MaterialTilingBase
     {
         /// <inheritdoc/>
         protected override void UpdateMaterials()
