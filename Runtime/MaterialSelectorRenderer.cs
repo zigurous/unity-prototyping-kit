@@ -79,6 +79,8 @@ namespace Zigurous.Prototyping
             if (TryGetComponent(out MaterialTilingBase tiling)) {
                 tiling.Tile();
             }
+
+            DynamicGI.UpdateEnvironment();
         }
 
         /// <summary>
@@ -100,8 +102,12 @@ namespace Zigurous.Prototyping
             Material material = new(shader)
             {
                 color = style.color,
-                globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive
+                globalIlluminationFlags = MaterialGlobalIlluminationFlags.None
             };
+
+            material.EnableKeyword("_EMISSION");
+            material.EnableKeyword("_NORMALMAP");
+            material.EnableKeyword("_PARALLAXMAP");
 
             // Standard
             material.SetFloat(_Metallic, style.metallic);
@@ -110,9 +116,6 @@ namespace Zigurous.Prototyping
             material.SetTexture(_EmissionMap, pattern.emissionMap);
             material.SetTexture(_BumpMap, pattern.normalMap);
             material.SetTexture(_ParallaxMap, pattern.heightMap);
-            material.EnableKeyword("_EMISSION");
-            material.EnableKeyword("_NORMALMAP");
-            material.EnableKeyword("_PARALLAXMAP");
 
             // HDRP/URP
             material.SetFloat(_Smoothness, style.smoothness);
@@ -120,6 +123,11 @@ namespace Zigurous.Prototyping
             material.SetTexture(_EmissiveColorMap, pattern.emissionMap);
             material.SetTexture(_NormalMap, pattern.normalMap);
             material.SetTexture(_HeightMap, pattern.heightMap);
+
+            #if UNITY_EDITOR
+            UnityEditor.Rendering.HighDefinition.HDShaderUtils.ResetMaterialKeywords(material);
+            EditorUtility.SetDirty(material);
+            #endif
 
             return material;
         }

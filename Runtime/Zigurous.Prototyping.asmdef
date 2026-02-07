@@ -1,3 +1,16 @@
-﻿{
-	"name": "Zigurous.Prototyping"
+{
+    "name": "Zigurous.Prototyping",
+    "rootNamespace": "",
+    "references": [
+        "GUID:78bd2ddd6e276394a9615c203e574844"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
