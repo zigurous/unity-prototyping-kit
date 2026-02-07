@@ -25,13 +25,13 @@ namespace Zigurous.Prototyping
         /// <summary>
         /// The texture tiling offset of the material being tiled.
         /// </summary>
-        [Tooltip("The texture tiling offset of the material being tiled.")]
+        [Tooltip("The texture tiling offset of the material being tiled."), Delayed]
         public Vector3 tilingOffset = Vector3.zero;
 
         /// <summary>
         /// The texture scale multiplier of the material being tiled.
         /// </summary>
-        [Tooltip("The texture scale multiplier of the material being tiled.")]
+        [Tooltip("The texture scale multiplier of the material being tiled."), Delayed]
         public float scaleMultiplier = 1f;
 
         /// <summary>
@@ -54,8 +54,7 @@ namespace Zigurous.Prototyping
         /// made and new material copies can be created. This is required for
         /// updating in the editor.
         /// </summary>
-        [SerializeField]
-        [HideInInspector]
+        [SerializeField, HideInInspector]
         internal int sharedInstanceId = -1;
 
         private void OnValidate()
