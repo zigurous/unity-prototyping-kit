@@ -102,7 +102,8 @@ namespace Zigurous.Prototyping
             Material material = new(shader)
             {
                 color = style.color,
-                globalIlluminationFlags = MaterialGlobalIlluminationFlags.None
+                globalIlluminationFlags = MaterialGlobalIlluminationFlags.None,
+                mainTexture = pattern.baseMap,
             };
 
             material.EnableKeyword("_EMISSION");
