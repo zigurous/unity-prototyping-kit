@@ -92,9 +92,10 @@ namespace Zigurous.Prototyping
         public Material CreateMaterial(MaterialStyle style, MaterialPattern pattern)
         {
             Shader shader;
+            RenderPipelineAsset renderPipeline = GraphicsSettings.currentRenderPipeline;
 
-            if (GraphicsSettings.currentRenderPipeline != null) {
-                shader = GraphicsSettings.currentRenderPipeline.defaultShader;
+            if (renderPipeline != null) {
+                shader = renderPipeline.defaultShader;
             } else {
                 shader = Shader.Find("Standard");
             }
@@ -110,24 +111,26 @@ namespace Zigurous.Prototyping
             material.EnableKeyword("_NORMALMAP");
             material.EnableKeyword("_PARALLAXMAP");
 
-            // Standard
-            material.SetFloat(_Metallic, style.metallic);
-            material.SetFloat(_Glossiness, style.smoothness);
-            material.SetColor(_EmissionColor, Color.white);
-            material.SetTexture(_EmissionMap, pattern.emissionMap);
-            material.SetTexture(_BumpMap, pattern.normalMap);
-            material.SetTexture(_ParallaxMap, pattern.heightMap);
-
-            // HDRP/URP
-            material.SetFloat(_Smoothness, style.smoothness);
-            material.SetColor(_EmissiveColor, Color.white);
-            material.SetTexture(_EmissiveColorMap, pattern.emissionMap);
-            material.SetTexture(_NormalMap, pattern.normalMap);
-            material.SetTexture(_HeightMap, pattern.heightMap);
+            if (renderPipeline != null && (renderPipeline.name.Contains("HDRP") || renderPipeline.name.Contains("URP")))
+            {
+                material.SetFloat(_Smoothness, style.smoothness);
+                material.SetColor(_EmissiveColor, Color.white);
+                material.SetTexture(_EmissiveColorMap, pattern.emissionMap);
+                material.SetTexture(_NormalMap, pattern.normalMap);
+                material.SetTexture(_HeightMap, pattern.heightMap);
+            }
+            else
+            {
+                material.SetFloat(_Metallic, style.metallic);
+                material.SetFloat(_Glossiness, style.smoothness);
+                material.SetColor(_EmissionColor, Color.white);
+                material.SetTexture(_EmissionMap, pattern.emissionMap);
+                material.SetTexture(_BumpMap, pattern.normalMap);
+                material.SetTexture(_ParallaxMap, pattern.heightMap);
+            }
 
             #if UNITY_EDITOR
             UnityEditor.Rendering.HighDefinition.HDShaderUtils.ResetMaterialKeywords(material);
-            EditorUtility.SetDirty(material);
             #endif
 
             return material;
