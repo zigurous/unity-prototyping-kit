@@ -30,11 +30,25 @@ namespace Zigurous.Prototyping
         private static readonly int _BumpMap = Shader.PropertyToID("_BumpMap");
         private static readonly int _HeightMap = Shader.PropertyToID("_HeightMap");
         private static readonly int _ParallaxMap = Shader.PropertyToID("_ParallaxMap");
+        private static readonly int _DoubleSidedEnable = Shader.PropertyToID("_DoubleSidedEnable");
 
         /// <summary>
         /// The renderer that holds the material being selected (Read only).
         /// </summary>
         public new Renderer renderer { get; private set; }
+
+        /// <summary>
+        /// Renders materials on both sides of the mesh.
+        /// </summary>
+        public bool doubleSided
+        {
+            get => m_DoubleSided;
+            set => m_DoubleSided = value;
+        }
+
+        [SerializeField]
+        [Tooltip("Renders materials on both sides of the mesh.")]
+        private bool m_DoubleSided;
 
         /// <summary>
         /// Applies the selected style and pattern to the renderer.
@@ -128,6 +142,9 @@ namespace Zigurous.Prototyping
                 material.SetTexture(_BumpMap, pattern.normalMap);
                 material.SetTexture(_ParallaxMap, pattern.heightMap);
             }
+
+            material.SetInt(_DoubleSidedEnable, m_DoubleSided ? 1 : 0);
+            material.doubleSidedGI = m_DoubleSided;
 
             #if UNITY_EDITOR
             UnityEditor.Rendering.HighDefinition.HDShaderUtils.ResetMaterialKeywords(material);
