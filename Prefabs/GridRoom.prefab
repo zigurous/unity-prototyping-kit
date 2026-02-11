@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e52bba7dbe8454b8a48502cea7ac62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Style: 2
+  m_Style: 3
   m_Pattern: 2
   m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
   m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
