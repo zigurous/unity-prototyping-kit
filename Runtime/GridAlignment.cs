@@ -6,6 +6,7 @@ namespace Zigurous.Prototyping
     /// Snaps an object's position, rotation, and scale to grid increments.
     /// </summary>
     [ExecuteAlways]
+    [SelectionBase]
     [AddComponentMenu("Zigurous/Prototyping/Grid Alignment")]
     [HelpURL("https://docs.zigurous.com/com.zigurous.prototyping/api/Zigurous.Prototyping/GridAlignment")]
     public sealed class GridAlignment : MonoBehaviour
