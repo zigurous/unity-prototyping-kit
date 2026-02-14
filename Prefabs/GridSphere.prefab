@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6001598397064768856}
   - component: {fileID: 2261168454025155994}
   - component: {fileID: 1371240505056346988}
-  - component: {fileID: 8782142513483687427}
   - component: {fileID: 8332704989082557208}
   m_Layer: 0
   m_Name: Mesh
@@ -69,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b87600ece83c8f6498b97403fc1f5719, type: 2}
+  - {fileID: 2100000, guid: b8175e3dd2a1abe44a4da37caf151f33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,23 +113,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8782142513483687427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 253396141077028092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a686accfd3577d7449399ee88bc78650, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilingOffset: {x: 0, y: 0, z: 0}
-  scaleMultiplier: 2
-  autoUpdate: 1
-  updateInEditor: 1
-  sharedInstanceId: -1
 --- !u!114 &8332704989082557208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +192,4 @@ MonoBehaviour:
   m_Pattern: 2
   m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
   m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
+  m_BaseMaterial: {fileID: 2100000, guid: 65d24dd7607ee9b439e6b7aff64f5150, type: 2}

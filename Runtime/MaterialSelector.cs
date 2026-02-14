@@ -18,7 +18,7 @@ namespace Zigurous.Prototyping
             MaterialSelectorRenderer renderer = GetComponentInChildren<MaterialSelectorRenderer>();
 
             if (renderer != null) {
-                renderer.Apply(style, pattern);
+                renderer.Apply(baseMaterial, style, pattern);
             }
         }
 

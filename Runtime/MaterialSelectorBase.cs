@@ -24,6 +24,10 @@ namespace Zigurous.Prototyping
         [Tooltip("The palette of available patterns.")]
         protected MaterialPatternPalette m_Patterns;
 
+        [SerializeField]
+        [Tooltip("The base material to clone.")]
+        protected Material m_BaseMaterial;
+
         /// <summary>
         /// The selected style preset.
         /// </summary>
@@ -58,6 +62,15 @@ namespace Zigurous.Prototyping
         {
             get => m_Patterns;
             set { m_Patterns = value; Apply(); }
+        }
+
+        /// <summary>
+        /// The base material to clone.
+        /// </summary>
+        public Material baseMaterial
+        {
+            get => m_BaseMaterial;
+            set { m_BaseMaterial = value; Apply(); }
         }
 
         /// <summary>
