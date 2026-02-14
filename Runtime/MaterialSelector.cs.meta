@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - m_Styles: {fileID: 11400000, guid: 41685b33f1801244cbc9206238d732bb, type: 2}
   - m_Patterns: {fileID: 11400000, guid: 29a95bad8c286904cbbc6cea4f9507d6, type: 2}
+  - m_BaseMaterial: {fileID: 2100000, guid: 65d24dd7607ee9b439e6b7aff64f5150, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
