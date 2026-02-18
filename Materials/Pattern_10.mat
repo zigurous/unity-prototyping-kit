@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   version: 13
   hdPluginSubTargetMaterialVersions:
     m_Keys: []
-    m_Values: 
+    m_Values:
 --- !u!114 &-1668498948737783919
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Unity.ShaderGraph.Editor::UnityEditor.Rendering.BuiltIn.AssetVersion
   version: 0
 --- !u!21 &2100000
@@ -56,7 +56,7 @@ Material:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
-  m_LockedProperties: 
+  m_LockedProperties:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -97,7 +97,6 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _DepthOffset: 0
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -142,6 +141,7 @@ Material:
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
+    - _ZFightingOffset: 0
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
