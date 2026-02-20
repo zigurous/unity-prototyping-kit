@@ -119,7 +119,7 @@ namespace Zigurous.Prototyping
             material.SetInt(_DoubleSidedEnable, m_DoubleSided ? 1 : 0);
             material.doubleSidedGI = m_DoubleSided;
 
-            #if UNITY_EDITOR
+            #if UNITY_EDITOR && HDRP_1_OR_NEWER
             UnityEditor.Rendering.HighDefinition.HDShaderUtils.ResetMaterialKeywords(material);
             #endif
 
