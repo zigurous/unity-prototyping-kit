@@ -2,7 +2,7 @@
   "name": "com.zigurous.prototyping",
   "version": "0.4.0",
   "displayName": "Prototyping Kit",
-  "description": "The Prototyping Kit package contains assets and materials for prototyping levels in Unity. The prefabs included in the package can be styled without needing to create new materials, and they are tiled automatically based on the size of the object.",
+  "description": "A utility kit for prototyping levels in Unity with ready-to-use assets, materials, and prefabs. Materials can quickly be changed from a predefined palette of colors and patterns and are automatically tiled based on object scale. The package also provides a grid alignment system that makes blocking-out levels quick and easy.",
   "unity": "2022.3",
   "repository": "https://github.com/zigurous/unity-prototyping-kit",
   "documentationUrl": "https://docs.zigurous.com/com.zigurous.prototyping",
